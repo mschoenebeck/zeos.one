@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ZEOS - #PrivacyMatters</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RE4WSQGJTE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RE4WSQGJTE');
+</script>
+<style>
+@font-face
+{
+    font-family: 'Arcade';
+    src: url('arcadeclassic/ARCADECLASSIC.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face
+{
+    font-family: 'Nerd';
+    src: url('3270 Narrow Nerd Font Complete Mono.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html
+{
+  scroll-behavior: smooth;
+  margin: 0px;
+  height: 100%;
+}
+body
+{
+  background-color: black;
+  color: lightgrey;
+  margin: 0px;
+  height: 100%;
+}
+
+h1
+{
+  font-family: 'Arcade';
+}
+h2, p, a
+{
+  font-family: 'Nerd';
+}
+h2
+{
+  font-size: 3vh;
+}
+p, a
+{
+  font-size: 2vh;
+}
+
+#zeos
+{
+  font-size: 10vh;
+  position: relative;
+  top: -5vh;
+}
+#logo
+{
+  position: relative;
+  top: -18vh;
+}
+#tagline
+{
+  font-size: 3vh;
+  position: relative;
+  top: -18vh;
+}
+
+#home
+{
+  background: url("blue_flare.png") no-repeat center center;
+  height:100vh;
+  position: relative;
+}
+#center_screen
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.arrow{
+    position: absolute;
+    bottom: 10vh;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.arrow span{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid lightgrey;
+    border-right: 5px solid lightgrey;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
+#nav {
+  background-color: black;
+  overflow: hidden;
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 5vh;
+}
+#nav a{
+  float: left;
+  color: lightgrey;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 3vh;
+  height: 100%;
+}
+#nav a:hover {
+  background-color: lightgrey;
+  color: black;
+}
+#nav-home-icon
+{
+  background-image: url('lightgrey.png');
+  width: 3vh;
+  height: 3vh;
+  background-size: contain;
+}
+#nav-home-icon:hover
+{
+  background-image: url('black.png');
+  width: 3vh;
+  height: 3vh;
+  background-size: contain;
+}
+
+
+#content
+{
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/  /* horizontally for flex-direction: row */
+  /*align-items: center; */ /* vertically for flex-direction: row */
+  flex-wrap: wrap;
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+.section
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  /* horizontally for flex-direction: row */
+  /*align-items: center; */ /* vertically for flex-direction: row */
+  flex-wrap: wrap;
+  height: 100%;
+}
+.section-element
+{
+  width: 500px;
+  height: auto;
+  text-align: center;
+  padding: 20px;
+  margin: 50px;
+}
+
+#features, #airdrop, #media
+{
+  min-height: 100vh;
+}
+
+#pieChart
+{
+  margin-top: 100px;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  /* horizontally for flex-direction: row */
+  align-items: center;  /* vertically for flex-direction: row */
+}
+.footer-element
+{
+  width: 200px;
+  height: auto;
+  text-align: center;
+  padding: 20px;
+  margin: 50px;
+}
+
+#page {
+  position: relative;
+  min-height: 100vh;
+}
+
+.icon
+{
+  width: auto;
+  height: 50px;
+}
+
+.news-element
+{
+  width: 600px;
+  height: auto;
+  padding: 20px;
+  margin: 100px;
+}
+.medium-widget-article__title
+{
+  color: lightgrey !important;
+  font-family: 'Nerd';
+  font-size: 3vh !important;
+  line-height: 3vh !important;
+}
+.medium-widget-article__description, .medium-widget-article__author-name, .medium-widget-article__date
+{
+  color: lightgrey !important;
+  font-family: 'Nerd';
+  font-size: 2vh !important;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<div id="page">
+<div id="nav">
+  <a href="#home"><div id="nav-home-icon"></div></a>
+  <a href="#features">Features</a>
+  <a href="#airdrop">Airdrop</a>
+  <a href="#media">Media</a>
+  <a href="https://github.com/mschoenebeck/thezeostoken" target="_blank">Github</a>
+</div>
+
+  <div id="content">
+    <div id="home">
+      <div id="center_screen">
+        <div id="zeos"><h1>ZEOS</h1></div>
+        <div id="logo"><img src="lightgrey.png"></img></div>
+        <div id="tagline"><h2>#PrivacyMatters</h2></div>
+      </div>
+      <div class="arrow">
+        <a href="#features">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+    </div>
+
+    <div id="features" class="section">
+      <div class="section-element">
+        <h2>Private and Untraceable</h2>
+        <p>ZEOS will enable fully private and untraceable transactions on the EOS mainnet. You will be able to send any amount of ZEOS to whomever you want without having the whole world watching you because of the transparency of the EOS blockchain.</p>
+      </div>
+      <div class="section-element">
+        <h2>Zero Transaction Fees</h2>
+        <p>Like all transparent token transfers on EOS private ZEOS transactions will be feeless as well. The only cost for transacting privately is going to be CPU time - as with all other transactions on EOS.</p>
+      </div>
+      <div class="section-element">
+        <h2>Instantaneous Transactions</h2>
+        <p>Since EOS block times are only 0.5 seconds private transactions using ZEOS will be blazingly fast. After preparing a transaction on your local device by generating the corresponding zero knowledge proof, sending and receiving the transaction will take almost no time.</p>
+      </div>
+      <div class="section-element">
+        <h2>State of the Art Technology</h2>
+        <p>Transactions with ZEOS are based on Zero Knowledge Proofs. This is state of the art technology for private transactions. It is even more anonymous than Monero tech since the anonymity set increases with each and every transaction. ZEOS' core functionality is based on the code of ZCash Sapling which is a widely adopted and well audited codebase.</p>
+      </div>
+      <div class="section-element">
+        <h2>Scalable</h2>
+        <p>ZEOS utilizes LiquidApps' DAPP Network services to provide unlimited scaling and lowest CPU costs for the end user. The goal of ZEOS is to make private transactions as cheap as possible for everyone - no matter how many transactions the users are sending per day. Everyone should be able to conduct private transactions at low costs - whenever and as often as they want.</p>
+      </div>
+      <div class="section-element">
+        <h2>More to come</h2>
+        <p>Private transactions with ZEOS are just the beginning. The long term goal of ZEOS is to create tools and protocols necessary to empower developers to build an entirely private and untraceable DeFi ecosystem on the EOS mainnet. Stay tuned for more.</p>
+      </div>
+    </div>
+
+    <div id="airdrop" class="section">
+      <div class="section-element">
+        <h2>Airdrop Details</h2>
+        <p>The ZEOS token supply is approximately 1 billion tokens. On December 24th a snapshot of the current PEOS token distribution was taken. From this snapshot several accounts like b1, peosteamfund, peosmarketin and all known exchange accounts have been excluded. All accounts included in the snapshot received 4.76 ZEOS tokens for each PEOS token they held in their EOS account at that time. 10% of the ZEOS token supply has been kept as a developer and project fund and will serve different purposes in the future.</p>
+        <canvas id="pieChart"></canvas>
+      </div>
+    </div>
+
+    <div id="media" class="section">
+      <div class="news-element">
+        <!-- created with: https://medium-widget.pixelpoint.io/ //-->
+        <div id="medium-widget"></div>
+        <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+        <script>MediumWidget.Init({renderTo: '#medium-widget', params: {"resource":"https://medium.com/the-liquidapps-blog/built-on-dapp-zeos-privacy-coin-8b2c0089b6cb","postsPerLine":1,"limit":1,"picture":"small","fields":["description","author","publishAt"],"ratio":"landscape"}})</script>
+      </div>
+      <!-- for another widget from different feed change element id name
+      <div class="news-element">
+        <div id="medium-widget2"></div>
+        <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+        <script>MediumWidget.Init({renderTo: '#medium-widget2', params: {"resource":"https://medium.com/the-liquidapps-blog/built-on-dapp-zeos-privacy-coin-8b2c0089b6cb","postsPerLine":1,"limit":1,"picture":"small","fields":["description","author","publishAt"],"ratio":"landscape"}})</script>
+      </div>
+      //-->
+    </div>
+
+    <div id="footer">
+        <div class="footer-element">
+          <p>Sponsored by</p>
+          <p><a href="https://edeneos.org/" target="_blank"><img class="icon" src="edenos_lightgrey.png"></a></p>
+          <!--<p><a href="https://telegr.am"><img class="icon" src="dappfund_lightgrey.png"></a></p>//-->
+        </div>
+        <div class="footer-element">
+          <p>Join the community</p>
+          <p><a href="https://t.me/ZeosOnEos" target="_blank"><img class="icon" src="telegram_lightgrey.png"></a><a href="https://discord.com/channels/909346124354187304/909346124354187313" target="_blank"><img class="icon" src="discord_lightgrey.png"></a><a href="https://twitter.com/ZEOSonEOS" target="_blank"><img class="icon" src="twitter_lightgrey.png"></a></p>
+        </div>
+        <div class="footer-element">
+          <p>Powered by</p>
+          <p><a href="https://eoscommunity.org/" target="_blank"><img class="icon" src="eos_lightgrey.png"></a><a href="https://liquidapps.io/" target="_blank"><img class="icon" src="dapp_lightgrey.png"></a></p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var a = 0;
+$(window).scroll(function()
+{
+    if(a == 0 && $(this).scrollTop() >= screen.height*0.8)
+    {
+        a = 1;
+        $('#nav').stop().fadeIn(500); 
+    }
+    else if(a == 1 && $(this).scrollTop() <= screen.height*0.8)
+    {
+        a = 0;
+        $('#nav').stop().fadeOut(300);
+    };
+});
+
+$(window).on('load', function()
+{
+    var ctx = document.getElementById('pieChart').getContext('2d');
+    var chart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: [90, 10],
+          backgroundColor: ['lightgrey', 'black']
+        }],
+        labels: ['90% PEOS community', '10% ZEOS funds']
+      },
+      options:
+      {
+        responsive: true,
+        legend: {
+                labels: {
+                    fontColor: "lightgrey",
+                    fontSize: 30,
+                    fontFamily: "Nerd"
+                }
+            }
+      }
+    });
+});
+</script>
+
+</body>
+</html>
