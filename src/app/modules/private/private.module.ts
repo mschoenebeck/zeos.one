@@ -1,4 +1,5 @@
-import { RouterModule } from '@angular/router';
+import { TranslocoRootModule } from './../shared/transloco-root/transloco-root.module';
+import { TranslocoModule } from '@ngneat/transloco';
 import { PrivateRoutingModule } from './private-routing.module';
 import { PrivateHomeComponent } from './pages/private-home/private-home.component';
 import { NgModule } from '@angular/core';
@@ -9,6 +10,8 @@ import { NgModule } from '@angular/core';
   ],
   imports: [
     PrivateRoutingModule,
+    TranslocoModule,
+    TranslocoRootModule
   ],
   exports: [
 

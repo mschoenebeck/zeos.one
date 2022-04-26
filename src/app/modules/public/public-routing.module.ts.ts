@@ -6,12 +6,17 @@ import { LandingHomeComponent } from './pages/landing-home/landing-home.componen
 
 const routes: Routes = [
   { path: PublicRoutes.default, component: PublicHomeComponent, children: [
-    { path: PublicRoutes.home, component: LandingHomeComponent },
+    { path: PublicRoutes.default, redirectTo: PublicRoutes.home, pathMatch: 'full' },
+    { path: PublicRoutes.default, component: LandingHomeComponent },
   ]}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forChild(routes)
+  ],
+  exports: [
+    RouterModule
+  ]
 })
 export class PublicRoutingModule { }
