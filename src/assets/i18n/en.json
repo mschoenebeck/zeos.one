@@ -1,0 +1,13 @@
+{
+  "shared": {
+    "navigation-bar": {
+      "features": "Features",
+      "technologies": "Technologies",
+      "roadmap": "Roadmap",
+      "social": "Social"
+    }
+  },
+  "public": {
+    "components": {}
+  }
+}

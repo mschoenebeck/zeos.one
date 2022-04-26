@@ -18,6 +18,7 @@
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
+    "@ngneat/transloco": "^4.0.0",
     "@popperjs/core": "^2.11.4",
     "@types/bootstrap": "^5.1.9",
     "@types/jquery": "^3.5.14",

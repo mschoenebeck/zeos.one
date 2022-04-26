@@ -1,0 +1,20 @@
+<!-- Image and text -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-deep-dark p-2 m-0" style="box-shadow: 0 6px 6px 0 rgba(0,0,0,.55);">
+  <div class="px-4">
+    <img class="d-inline-block align-top" (click)="changeAction(LandingPageAction.FIRST_CONTAINER)" src="./assets/img/icons/zeos_lightgrey.png" width="50" height="50" alt="Token Logo Image"/>
+  </div>
+
+  <button class="navbar-toggler m-2 pointer" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse p-0 m-0" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a [routerLink]="" class="navbar-brand nav-item nav-link active text-light pointer" (click)="changeAction(LandingPageAction.FIRST_CONTAINER)">{{('shared.navigation-bar.home' | transloco)}}</a>
+      <a [routerLink]="" class="navbar-brand nav-item nav-link active text-light pointer" (click)="changeAction(LandingPageAction.SECOND_CONTAINER)">{{('shared.navigation-bar.features' | transloco)}}</a>
+      <a [routerLink]="" class="navbar-brand nav-item nav-link active text-light pointer" (click)="changeAction(LandingPageAction.THIRD_CONTAINER)">{{('shared.navigation-bar.technologies' | transloco)}}</a>
+      <a [routerLink]="" class="navbar-brand nav-item nav-link active text-light pointer" (click)="changeAction(LandingPageAction.FOURTH_CONTAINER)">{{('shared.navigation-bar.roadmap' | transloco)}}</a>
+      <a [routerLink]="" class="navbar-brand nav-item nav-link active text-light pointer" (click)="changeAction(LandingPageAction.FIFTH_CONTAINER)">{{('shared.navigation-bar.social' | transloco)}}</a>
+    </div>
+  </div>
+</nav>

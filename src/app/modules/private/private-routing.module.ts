@@ -5,12 +5,17 @@ import { PrivateHomeComponent } from './pages/private-home/private-home.componen
 
 const routes: Routes = [
   { path: PrivateRoutes.default, component: PrivateHomeComponent, children: [
+    { path: PrivateRoutes.default, redirectTo: PrivateRoutes.home, pathMatch: 'full' },
     { path: PrivateRoutes.home, component: PrivateHomeComponent },
   ]}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forChild(routes)
+  ],
+  exports: [
+    RouterModule
+  ]
 })
 export class PrivateRoutingModule { }
