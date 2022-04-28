@@ -1,5 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { LandingPageAction } from './enums/landing-page-action.enum';
+import { LandingPageAction } from 'src/app/modules/shared/navigation-bar/enums/landing-page-action.enum';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -8,7 +8,7 @@ import { LandingPageAction } from './enums/landing-page-action.enum';
 })
 export class NavigationBarComponent {
   @Output() landingPageAction = new EventEmitter<LandingPageAction>();
-  LandingPageAction = LandingPageAction;
+  public LandingPageAction = LandingPageAction;
 
   constructor() { }
 
