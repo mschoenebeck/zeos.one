@@ -1,5 +1,5 @@
 <app-navigation-bar (landingPageAction)="changeUserLocation($event)"></app-navigation-bar>
-<app-first-step #step1></app-first-step>
+<app-first-step (landingPageAction)="changeUserLocation($event)" #step1></app-first-step>
 <app-second-step #step2></app-second-step>
 <app-third-step #step3></app-third-step>
 <app-fourth-step #step4></app-fourth-step>
