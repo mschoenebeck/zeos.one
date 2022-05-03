@@ -9,7 +9,6 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class FirstStepComponent {
 
   @Output() landingPageAction = new EventEmitter<LandingPageAction>();
-  public LandingPageAction = LandingPageAction;
 
   constructor() { }
 
@@ -18,7 +17,8 @@ export class FirstStepComponent {
    *
    * @param landingPageAction LandingPageAction enum
    */
-  public changeAction(landingPageAction: LandingPageAction) {
-    this.landingPageAction.emit(landingPageAction);
+  public changeAction() {
+    console.log('hhhey')
+    this.landingPageAction.emit(LandingPageAction.SECOND_CONTAINER);
   }
 }

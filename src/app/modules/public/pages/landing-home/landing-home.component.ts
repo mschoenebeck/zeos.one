@@ -6,7 +6,7 @@ import { LandingPageAction } from 'src/app/modules/shared/navigation-bar/enums/l
   templateUrl: './landing-home.component.html',
   styleUrls: ['./landing-home.component.scss']
 })
-export class LandingHomeComponent implements OnInit {
+export class LandingHomeComponent {
 
   @ViewChild('step1', { read: ElementRef }) public firstStep?: ElementRef;
   @ViewChild('step2', { read: ElementRef }) public secondStep?: ElementRef;
@@ -15,9 +15,6 @@ export class LandingHomeComponent implements OnInit {
   @ViewChild('step5', { read: ElementRef }) public fifthStep?: ElementRef;
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
   public changeUserLocation(landingPageAction: LandingPageAction) {
     switch(+landingPageAction) {

@@ -1,6 +1,6 @@
 <app-navigation-bar (landingPageAction)="changeUserLocation($event)"></app-navigation-bar>
 <app-first-step (landingPageAction)="changeUserLocation($event)" #step1></app-first-step>
-<app-second-step #step2></app-second-step>
-<app-third-step #step3></app-third-step>
-<app-fourth-step #step4></app-fourth-step>
-<app-fifth-step #step5></app-fifth-step>
+<app-second-step (landingPageAction)="changeUserLocation($event)" #step2></app-second-step>
+<app-third-step (landingPageAction)="changeUserLocation($event)" #step3></app-third-step>
+<app-fourth-step (landingPageAction)="changeUserLocation($event)" #step4></app-fourth-step>
+<app-fifth-step (landingPageAction)="changeUserLocation($event)" #step5></app-fifth-step>
