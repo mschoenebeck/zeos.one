@@ -9,6 +9,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class NavigationBarComponent {
   @Output() landingPageAction = new EventEmitter<LandingPageAction>();
   public LandingPageAction = LandingPageAction;
+  public expanded: boolean = false;
 
   constructor() { }
 
