@@ -1,10 +1,11 @@
 {
   "shared": {
     "navigation-bar": {
-      "features": "Features",
-      "technologies": "Technologies",
-      "roadmap": "Roadmap",
-      "social": "Social"
+      "first-item": "Home",
+      "second-item": "Features",
+      "third-item": "Whitepaper",
+      "fourth-item": "Roadmap",
+      "fifth-item": "Social"
     }
   },
   "public": {
