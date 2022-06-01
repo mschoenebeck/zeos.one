@@ -6,15 +6,15 @@ import { TranslocoModule } from '@ngneat/transloco';
 
 @NgModule({
   declarations: [
-    NavigationBarComponent
+    NavigationBarComponent,
   ],
   imports: [
     CommonModule,
     TranslocoModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [
-    NavigationBarComponent
-  ]
+    NavigationBarComponent,
+  ],
 })
 export class NavigationBarModule { }

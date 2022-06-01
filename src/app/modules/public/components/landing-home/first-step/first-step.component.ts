@@ -4,10 +4,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'app-first-step',
   templateUrl: './first-step.component.html',
-  styleUrls: ['./first-step.component.scss']
+  styleUrls: ['./first-step.component.scss'],
 })
 export class FirstStepComponent {
-
   @Output() landingPageAction = new EventEmitter<LandingPageAction>();
 
   constructor() { }
@@ -18,7 +17,6 @@ export class FirstStepComponent {
    * @param landingPageAction LandingPageAction enum
    */
   public changeAction() {
-    console.log('hhhey')
     this.landingPageAction.emit(LandingPageAction.SECOND_CONTAINER);
   }
 }

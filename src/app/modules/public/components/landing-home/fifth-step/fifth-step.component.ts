@@ -1,13 +1,12 @@
 import { LandingPageAction } from './../../../../shared/navigation-bar/enums/landing-page-action.enum';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-fifth-step',
   templateUrl: './fifth-step.component.html',
-  styleUrls: ['./fifth-step.component.scss']
+  styleUrls: ['./fifth-step.component.scss'],
 })
 export class FifthStepComponent {
-
   @Output() landingPageAction = new EventEmitter<LandingPageAction>();
 
   constructor() { }

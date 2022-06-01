@@ -19,13 +19,13 @@ import { FifthStepComponent } from './components/landing-home/fifth-step/fifth-s
     SecondStepComponent,
     ThirdStepComponent,
     FourthStepComponent,
-    FifthStepComponent
+    FifthStepComponent,
   ],
   imports: [
     PublicRoutingModule,
     NavigationBarModule,
     TranslocoModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [
 
@@ -34,7 +34,7 @@ import { FifthStepComponent } from './components/landing-home/fifth-step/fifth-s
 
   ],
   bootstrap: [
-    PublicHomeComponent
-  ]
+    PublicHomeComponent,
+  ],
 })
 export class PublicModule { }

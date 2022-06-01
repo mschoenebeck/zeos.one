@@ -11,7 +11,7 @@ import { NgModule } from '@angular/core';
   imports: [
     PrivateRoutingModule,
     TranslocoModule,
-    TranslocoRootModule
+    TranslocoRootModule,
   ],
   exports: [
 
@@ -20,7 +20,7 @@ import { NgModule } from '@angular/core';
 
   ],
   bootstrap: [
-    PrivateHomeComponent
-  ]
+    PrivateHomeComponent,
+  ],
 })
 export class PrivateModule { }

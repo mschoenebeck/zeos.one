@@ -1,6 +1,6 @@
 export enum AppRoutes {
-  default= "",
-  private= "private",
-  public= "public",
-  notFound = "**"
+  default= '',
+  private= 'private',
+  public= 'public',
+  notFound = '**'
 }
