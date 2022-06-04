@@ -1,29 +1,68 @@
 <div class="full-height main-container text-light">
   <div class="full-height d-flex align-items-center justify-content-center bg-deep-dark position-relative">
-    <div class="d-grid text-center">
-      <p class="fs-1 fw-bolder pb-4" style="letter-spacing: 8px; font-family: Arcade;">SOCIAL MEDIA</p>
+    <div class="d-grid h-100 top-0 mx-2">
+      <div class="w-100 m-auto mb-4">
+        <p class="fs-5 text-center fw-bolder pt-1 w-100 pb-4" style="letter-spacing: 8px; font-family: Arcade;">Interesting links:</p>
 
-        <div class="w-100 d-inline">
-          <a [routerLink]="['https://t.me/ZeosOnEos']"><img src="./assets/img/icons/telegrama.png" width="75" height="75" class="mx-4" alt="Private and Untraceable Image"/></a>
-          <a [routerLink]="['https://discord.gg/MDgYHJy8HH0']"><img src="./assets/img/icons/discord.png" width="75" height="75" class="mx-4" alt="Private and Untraceable Image"/></a>
-          <a [routerLink]="['https://github.com/mschoenebeck/thezeostoken']"><img src="./assets/img/icons/github.png" width="75" height="75" class="mx-4" alt="Private and Untraceable Image"/></a>
+        <div class="w-100 border border-white px-4 text-center">
+          <a class="link-light" [href]="['https://github.com/mschoenebeck/thezeostoken']">
+            <p class="fw-bolder pt-4 w-100 pb-4" style="font-family: Arcade;">Contract of the Zeos Token</p>
+          </a>
+          <a class="link-light" [href]="['https://github.com/mschoenebeck/zeos.one']">
+            <p class="fw-bolder pt-4 w-100 pb-4" style="font-family: Arcade;">Website repository</p>
+          </a>
+          <a class="link-light" [href]="['https://github.com/mschoenebeck/bellman']">
+            <p class="fw-bolder pt-4 w-100 pb-4" style="font-family: Arcade;">zk-SNARK circuits</p>
+          </a>
+          <a class="link-light" [href]="['https://www.eosgo.io/news/yield-blue-paper-liqudity-rewards-on-eos']">
+            <p class="fw-bolder pt-4 w-100 pb-4" style="font-family: Arcade;">Liquidity Rewards Program for the EOS Network (Zeos liquidity Program)</p>
+          </a>
+        </div>
+      </div>
+
+
+
+      <div class="row w-100 p-0 m-0 position-relative bottom-0 start-50 translate-middle-x mb-4 text-center">
+        <div class="col-sm-4 mb-4">
+          <div class="position-relative top-50">
+            <p class="fw-bolder" style="letter-spacing: 8px; font-family: Arcade;">Powered by</p>
+
+            <div class="w-100 d-inline">
+              <a [href]="['https://eoscommunity.org/']"><img src="./assets/img/icons/eos_lightgrey.png" width="45" height="45" class="mx-4" alt="Private and Untraceable Image"/></a>
+              <a [href]="['https://liquidapps.io/']"><img src="./assets/img/icons/dapp_lightgrey.png" width="45" height="45" class="mx-4" alt="Private and Untraceable Image"/></a>
+            </div>
+          </div>
         </div>
 
+        <div class="col-sm-4 mb-4">
+          <div class="position-relative top-50">
+            <p class="fw-bolder" style="letter-spacing: 8px; font-family: Arcade;">Join us on</p>
 
-        <div class="w-100 position-absolute bottom-0 start-50 translate-middle-x pb-4">
-          <p class="fw-bolder p-4" style="letter-spacing: 8px; font-family: Arcade;">Powered by</p>
-
-        <div class="w-100 d-inline">
-          <a [routerLink]="['https://edeneos.org/']"><img src="./assets/img/icons/edenos_lightgrey.png" width="45" height="45" class="mx-4" alt="Private and Untraceable Image"/></a>
-          <a [routerLink]="['https://eoscommunity.org/']"><img src="./assets/img/icons/eos_lightgrey.png" width="45" height="45" class="mx-4" alt="Private and Untraceable Image"/></a>
-          <a [routerLink]="['https://liquidapps.io/']"><img src="./assets/img/icons/dapp_lightgrey.png" width="45" height="45" class="mx-4" alt="Private and Untraceable Image"/></a>
+            <div class="w-100 d-inline">
+              <a [href]="['https://t.me/ZeosOnEos']"><img src="./assets/img/icons/telegrama.png" width="45" height="45" class="mx-4" alt="Private and Untraceable Image"/></a>
+              <a [href]="['https://discord.gg/MDgYHJy8HH0']"><img src="./assets/img/icons/discord.png" width="45" height="45" class="mx-4" alt="Private and Untraceable Image"/></a>
+              <a [href]="['https://github.com/mschoenebeck/thezeostoken']"><img src="./assets/img/icons/github.png" width="45" height="45" class="mx-4" alt="Private and Untraceable Image"/></a>
+            </div>
+          </div>
         </div>
 
-        <div (click)="changeAction()" class="text-center pt-4">
-          <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
-          </svg>
+        <div class="col-sm-4 mb-4">
+          <div class="position-relative top-50">
+            <p class="fw-bolder" style="letter-spacing: 8px; font-family: Arcade;">Sponsored by</p>
+
+            <div class="w-100 d-inline">
+              <a [href]="['https://edeneos.org/']"><img src="./assets/img/icons/edenos_lightgrey.png" width="45" height="45" class="mx-4" alt="Private and Untraceable Image"/></a>
+            </div>
+          </div>
         </div>
+        <div (click)="changeAction()" class="pt-4 position-relative m-auto">
+          <a class="text-light" [routerLink]="['/']">
+            <div class="animated bounce infinite">
+              <img title="Go to the next container" src="./assets/img/icons/arrow_up.svg" alt="Token Logo Image"/>
+            </div>
+          </a>
+        </div>
+
       </div>
     </div>
   </div>

@@ -4,7 +4,7 @@
 
 @media screen and (max-width: 660px) {
   .full-height {
-    min-height: 200vh !important;
+    min-height: 100vh !important;
   }
 }
 
@@ -95,5 +95,11 @@ p {
   margin-top: 0.4rem;
   @include mobile-only {
     font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .row {
+    width: 85%!important;
   }
 }

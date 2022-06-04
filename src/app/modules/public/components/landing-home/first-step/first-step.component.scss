@@ -2,8 +2,17 @@
   height: 100vh!important;
 }
 
+.title {
+  font-size: 9.41em!important;
+}
 @media screen and (max-width: 660px) {
   .full-height {
     min-height: 100vh!important;
+  }
+  .title {
+    font-size: 5.41rem!important;
+  }
+  .subtitle {
+    font-size: 1.41em!important;
   }
 }
