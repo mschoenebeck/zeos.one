@@ -10,12 +10,12 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" [ngClass]="{'show': this.expanded }" (click)="this.expanded = !this.expanded" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse arcade-nospace" [ngClass]="{'show': this.expanded }" (click)="this.expanded = !this.expanded" id="navbarSupportedContent">
     <div class="navbar-nav text-center">
-      <a [routerLink]="['/']" title="{{('shared.navigation-bar.second-item-title' | transloco)}}" class="navbar-brand nav-item nav-link active text-light pointer m-0" (click)="changeAction(LandingPageAction.SECOND_CONTAINER)">{{('shared.navigation-bar.second-item' | transloco)}}</a>
-      <a [routerLink]="['/']" title="{{('shared.navigation-bar.third-item-title' | transloco)}}" class="navbar-brand nav-item nav-link active text-light pointer m-0" (click)="changeAction(LandingPageAction.THIRD_CONTAINER)">{{('shared.navigation-bar.third-item' | transloco)}}</a>
-      <a [routerLink]="['/']" title="{{('shared.navigation-bar.fourth-item-title' | transloco)}}" class="navbar-brand nav-item nav-link active text-light pointer m-0" (click)="changeAction(LandingPageAction.FOURTH_CONTAINER)">{{('shared.navigation-bar.fourth-item' | transloco)}}</a>
-      <a [routerLink]="['/']" title="{{('shared.navigation-bar.fifth-item-title' | transloco)}}" class="navbar-brand nav-item nav-link active text-light pointer m-0" (click)="changeAction(LandingPageAction.FIFTH_CONTAINER)">{{('shared.navigation-bar.fifth-item' | transloco)}}</a>
+      <a [routerLink]="['/']" title="{{('shared.navigation-bar.second-item-title' | transloco)}}" class="navbar-brand nav-item nav-link active text-light pointer m-0 mx-3" (click)="changeAction(LandingPageAction.SECOND_CONTAINER)">{{('shared.navigation-bar.second-item' | transloco)}}</a>
+      <a [routerLink]="['/']" title="{{('shared.navigation-bar.third-item-title' | transloco)}}" class="navbar-brand nav-item nav-link active text-light pointer m-0 mx-3" (click)="changeAction(LandingPageAction.THIRD_CONTAINER)">{{('shared.navigation-bar.third-item' | transloco)}}</a>
+      <a [routerLink]="['/']" title="{{('shared.navigation-bar.fourth-item-title' | transloco)}}" class="navbar-brand nav-item nav-link active text-light pointer m-0 mx-3" (click)="changeAction(LandingPageAction.FOURTH_CONTAINER)">{{('shared.navigation-bar.fourth-item' | transloco)}}</a>
+      <a [routerLink]="['/']" title="{{('shared.navigation-bar.fifth-item-title' | transloco)}}" class="navbar-brand nav-item nav-link active text-light pointer m-0 mx-3" (click)="changeAction(LandingPageAction.FIFTH_CONTAINER)">{{('shared.navigation-bar.fifth-item' | transloco)}}</a>
     </div>
   </div>
 </nav>
