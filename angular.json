@@ -37,6 +37,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/styles/bootstrap-override.scss",
               "src/assets/styles/fonts.scss",
+              "node_modules/animate.css/animate.css",
               "src/assets/styles/styles.scss"
             ],
             "scripts": [
@@ -112,6 +113,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/styles/bootstrap-override.scss",
               "src/assets/styles/fonts.scss",
+              "node_modules/animate.css/animate.css",
               "src/assets/styles/styles.scss"
             ],
             "scripts": [
