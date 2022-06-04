@@ -2,13 +2,36 @@
   "shared": {
     "navigation-bar": {
       "first-item": "Home",
-      "second-item": "Features",
-      "third-item": "Whitepaper",
+      "second-item": "El protocolo",
+      "third-item": "zAseets",
       "fourth-item": "Roadmap",
-      "fifth-item": "Social"
+      "fifth-item": "Resources",
+
+      "first-item-title": "Go to Home",
+      "second-item-title": "Go to zAseets",
+      "third-item-title": "Go to Roadmap",
+      "fourth-item-title": "Go to Resources",
+      "fifth-item-title": "Go to Resources"
     }
   },
   "public": {
-    "components": {}
+    "components": {
+      "first-step": {
+        "title": "ZEOS",
+        "hashtag-privacy-matters": "#PrivacyMatters"
+      },
+      "second-step": {
+
+      },
+      "third-step": {
+
+      },
+      "fourth-step": {
+
+      },
+      "fifth-step": {
+
+      }
+    }
   }
 }
