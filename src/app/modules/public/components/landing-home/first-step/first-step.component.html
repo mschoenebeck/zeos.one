@@ -1,7 +1,7 @@
 <div class="full-height main-container text-light">
-  <div class="full-height d-flex align-items-center justify-content-center bg-deep-dark">
-    <div class="d-grid text-center">
-      <p class="fw-bolder pb-4 title arcade-nospace">{{('public.components.first-step.title' | transloco)}}</p>
+  <div class="full-height d-flex align-items-center justify-content-center bg-deep-dark ">
+    <div class="d-grid text-center position-relative" style="top: -50px!important;">
+      <p class="fw-bolder top-0 pb-4 title arcade-nospace">{{('public.components.first-step.title' | transloco)}}</p>
 
 
       <span style="-webkit-box-shadow: 0px 185px 182px 141px rgba(9,0,255,1);
@@ -14,14 +14,14 @@
       <div class="w-100 p-2 pt-4">
         <span class="text-capitalize fw-bolder bg-transparent subtitle nerd">{{('public.components.first-step.hashtag-privacy-matters' | transloco)}}</span>
       </div>
-
-      <div (click)="changeAction()" class="pb-4 position-absolute bottom-0 start-50 translate-middle-x">
-        <a class="text-light" [routerLink]="['/']">
-          <div class="animated bounce infinite">
-            <img title="Go to the next container" src="./assets/img/icons/arrow_down.svg" alt="Token Logo Image"/>
-          </div>
-        </a>
-      </div>
     </div>
+  </div>
+
+  <div (click)="changeAction()" class="pb-4 position-absolute bottom-0 start-50 translate-middle-x">
+    <a class="text-light" [routerLink]="['/']">
+      <div class="animated bounce infinite">
+        <img title="Go to the next container" src="./assets/img/icons/arrow_down.svg" alt="Token Logo Image"/>
+      </div>
+    </a>
   </div>
 </div>
