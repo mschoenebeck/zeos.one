@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
     "format": "npx prettier --write .",
-    "deploy": "ng build --prod --base-href=/zeosone/"
+    "deploy": "ng build"
   },
   "private": true,
   "dependencies": {
