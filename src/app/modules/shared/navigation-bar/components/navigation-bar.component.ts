@@ -1,5 +1,5 @@
 import { LandingPageAction } from 'src/app/modules/shared/navigation-bar/enums/landing-page-action.enum';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -8,8 +8,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class NavigationBarComponent {
   @Output() landingPageAction = new EventEmitter<LandingPageAction>();
+  @ViewChild('navbar') navbarElement: ElementRef | undefined;
+
   public LandingPageAction = LandingPageAction;
   public expanded: boolean = false;
+
+  get hostElement(): HTMLElement {
+    return this.navbarElement?.nativeElement;
+  }
 
   constructor() { }
 
@@ -18,7 +24,19 @@ export class NavigationBarComponent {
    *
    * @param landingPageAction LandingPageAction enum
    */
-  changeAction(landingPageAction: LandingPageAction) {
+  public changeAction(landingPageAction: LandingPageAction) {
     this.landingPageAction.emit(landingPageAction);
+  }
+
+  @HostListener('window:scroll', ['$event']) // for window scroll events
+  private onScroll() {
+    if (window.scrollY > 200) {
+      this.hostElement.classList.remove('d-none');
+      this.hostElement.classList.remove('fadeOut');
+      this.hostElement.classList.add('fadeIn');
+    } else {
+      this.hostElement.classList.remove('fadeIn');
+      this.hostElement.classList.add('fadeOut');
+    }
   }
 }
