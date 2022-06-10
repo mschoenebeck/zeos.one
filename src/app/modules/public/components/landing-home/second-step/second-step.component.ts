@@ -10,7 +10,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class SecondStepComponent {
   @Output() landingPageAction = new EventEmitter<LandingPageAction>();
   public LandingPageAction = LandingPageAction;
-  ArrowDirection = ArrowDirection;
+  public ArrowDirection = ArrowDirection;
 
   constructor() { }
 

@@ -12,6 +12,7 @@ export class LandingHomeComponent {
   @ViewChild('step3', { read: ElementRef }) public thirdStep?: ElementRef;
   @ViewChild('step4', { read: ElementRef }) public fourthStep?: ElementRef;
   @ViewChild('step5', { read: ElementRef }) public fifthStep?: ElementRef;
+  @ViewChild('step6', { read: ElementRef }) public sixthStep?: ElementRef;
 
   constructor() { }
 
@@ -35,6 +36,10 @@ export class LandingHomeComponent {
         break;
       case LandingPageAction.FIFTH_CONTAINER:
         this.fifthStep?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        break;
+      case LandingPageAction.SIXTH_CONTAINER:
+        this.sixthStep?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
         break;
       default:

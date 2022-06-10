@@ -1,0 +1,66 @@
+
+
+<div class="full-height main-container text-light">
+  <div class="full-height d-flex align-items-center justify-content-center bg-deep-dark position-relative">
+    <div class="d-grid h-100 top-0 mx-2">
+      <div class="w-100 m-auto mb-4">
+        <p class="arcade fs-5 text-center fw-bolder pt-1 w-100 pb-4 nerd">{{('public.components.sixth-step.title' | transloco)}}</p>
+
+        <div class="w-50 m-auto border border-white px-4 text-center">
+          <a class="link-light" [href]="['https://github.com/mschoenebeck']">
+            <p class="fw-bolder pt-4 w-100 pb-4" style="font-family: Arcade;">{{('public.components.sixth-step.whitepaper' | transloco)}}</p>
+          </a>
+          <a class="link-light" [href]="['https://github.com/mschoenebeck']">
+            <p class="fw-bolder pt-4 w-100 pb-4" style="font-family: Arcade;">{{('public.components.sixth-step.github' | transloco)}}</p>
+          </a>
+          <a class="link-light" [href]="['https://github.com/mschoenebeck']">
+            <p class="fw-bolder pt-4 w-100 pb-4" style="font-family: Arcade;">{{('public.components.sixth-step.test-net-demo' | transloco)}}</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="row w-100 p-0 m-0 position-relative bottom-0 start-50 translate-middle-x mb-4 text-center">
+        <div class="col-sm-4 mb-4">
+          <div class="position-relative top-50">
+            <p class="fw-bolder arcade">{{('public.components.sixth-step.powered-by' | transloco)}}</p>
+
+            <div class="w-100 d-inline">
+              <a [href]="['https://eoscommunity.org/']"><img src="./assets/img/icons/eos_lightgrey.png" width="45" height="45" class="mx-4" alt="Private and Untraceable Image"/></a>
+              <a [href]="['https://liquidapps.io/']"><img src="./assets/img/icons/dapp_lightgrey.png" width="45" height="45" class="mx-4" alt="Private and Untraceable Image"/></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 mb-4">
+          <div class="position-relative top-50">
+            <p class="fw-bolder arcade">{{('public.components.sixth-step.join-uson' | transloco)}}</p>
+
+            <div class="w-100 d-inline">
+              <a [href]="['https://t.me/ZeosOnEos']"><img src="./assets/img/icons/telegrama.png" width="45" height="45" class="mx-4" alt="Private and Untraceable Image"/></a>
+              <a [href]="['https://discord.gg/MDgYHJy8HH0']"><img src="./assets/img/icons/discord.png" width="45" height="45" class="mx-4" alt="Private and Untraceable Image"/></a>
+              <a [href]="['https://github.com/mschoenebeck/thezeostoken']"><img src="./assets/img/icons/github.png" width="45" height="45" class="mx-4" alt="Private and Untraceable Image"/></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 mb-4">
+          <div class="position-relative top-50">
+            <p class="fw-bolder arcade">{{('public.components.sixth-step.sponsoredby' | transloco)}}</p>
+
+            <div class="w-100 d-inline">
+              <a [href]="['https://edeneos.org/']"><img src="./assets/img/icons/edenos_lightgrey.png" width="45" height="45" class="mx-4" alt="Private and Untraceable Image"/></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 position-relative m-auto">
+          <app-arrow-redirect
+            [emitAction]="LandingPageAction.FIRST_CONTAINER"
+            [arrowDirection]="ArrowDirection.ARROW_UP"
+            (arrowAction)="changeAction($event)">
+          </app-arrow-redirect>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

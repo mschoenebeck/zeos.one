@@ -1,13 +1,13 @@
-import { ArrowDirection } from './../../../../shared/arrow-redirect/enum/arrow-direction.enum';
-import { LandingPageAction } from './../../../../shared/navigation-bar/enums/landing-page-action.enum';
+import { ArrowDirection } from '../../../../shared/arrow-redirect/enum/arrow-direction.enum';
+import { LandingPageAction } from 'src/app/modules/shared/navigation-bar/enums/landing-page-action.enum';
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-fourth-step',
-  templateUrl: './fourth-step.component.html',
-  styleUrls: ['./fourth-step.component.scss'],
+  selector: 'app-sixth-step',
+  templateUrl: './sixth-step.component.html',
+  styleUrls: ['./sixth-container.component.scss'],
 })
-export class FourthStepComponent {
+export class SixthStepComponent {
   @Output() landingPageAction = new EventEmitter<LandingPageAction>();
   public LandingPageAction = LandingPageAction;
   public ArrowDirection = ArrowDirection;

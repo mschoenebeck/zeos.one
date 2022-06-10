@@ -3,10 +3,10 @@
     <div class="animated bounce infinite">
       <div *ngIf="arrowDirection === ArrowDirection.ARROW_UP; then arrowUp else arrowDown">here is ignored</div>
       <ng-template #arrowUp>
-        <img title="Go to the previous container" src="./assets/img/icons/arrow_up.svg" alt="Token Logo Image"/>
+        <img title="Go to the previous container" src="./assets/img/icons/arrow_up.svg" alt="{{('shared.arrow-redirect.arrow-up-alt') | transloco}}"/>
       </ng-template>
       <ng-template #arrowDown>
-        <img title="Go to the next container" src="./assets/img/icons/arrow_down.svg" alt="Token Logo Image"/>
+        <img title="Go to the next container" src="./assets/img/icons/arrow_down.svg" alt="{{('shared.arrow-redirect.arrow-down-alt') | transloco}}"/>
       </ng-template>
     </div>
   </a>

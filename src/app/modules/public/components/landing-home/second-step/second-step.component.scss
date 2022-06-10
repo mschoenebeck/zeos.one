@@ -1,13 +1,13 @@
 .full-height {
-  height: 100vh!important;
+  height: 120vh!important;
 }
 .blue-halo-big {
   -webkit-box-shadow: 50px 25px 300px 40px rgba(9,0,255,1);
   -moz-box-shadow: 50px 25px 300px 40px rgba(9,0,255,1);
   box-shadow: 50px 25px 300px 60px rgba(9,0,255,1);
 }
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 1260px) {
   .full-height {
-    min-height: 300vh!important;
+    min-height: 350vh!important;
   }
 }

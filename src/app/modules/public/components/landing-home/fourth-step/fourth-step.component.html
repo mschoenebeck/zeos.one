@@ -1,42 +1,40 @@
-<div class="full-height main-container text-light">
-  <div class="full-height d-flex align-items-center justify-content-center bg-deep-dark position-relative">
-    <div class="w-100">
-      <div class="w-100 text-center">
-        <p class="fs-4 fw-bolder m-0 pt-4 arcade">Roadmap</p>
-      </div>
-      <div class="row m-auto w-25 align-items-center">
-        <ul class="sessions">
-          <li>
-            <div class="time">5/10/2021</div>
-            <p>First ideas</p>
-          </li>
-          <li>
-            <div class="time">5/12/2021</div>
-            <p>First Implementations</p>
-          </li>
-          <li>
-            <div class="time">20/01/2022</div>
-            <p>Proof of work - Test Net</p>
-          </li>
-          <li>
-            <div class="time">24/08/2022</div>
-            <p>Marketing, prelaunch</p>
-          </li>
-          <li>
-            <div class="time">28/09/2022</div>
-            <p>Mainnet launch</p>
-          </li>
-        </ul>
+<div class="full-height text-light">
+  <div class="m-auto align-items-center justify-content-center h-100 bg-deep-dark">
+    <div class="row m-auto w-100 h-75 align-items-center pt-4">
 
+      <p class="col-md-12 fs-1 fw-bolder nerd mt-4 text-center">{{('public.components.third-step.title' | transloco)}}</p>
+      <div class="col-md-12 col-lg-4 pt-0">
+        <div class="text-center pt-2">
+          <img src="./assets/img/icons/anonymous.png" width="100" height="100" alt="{{('public.components.fourth-step.first-container-alt' | transloco)}}"/>
+          <h5 class="card-title h2">{{('public.components.fourth-step.first-container-title' | transloco)}}</h5>
+          <p class="card-text m-auto w-75">{{('public.components.fourth-step.first-container-text' | transloco)}}</p>
+        </div>
       </div>
 
-      <div class="w-100 position-absolute bottom-0 start-50 translate-middle-x pb-4 text-center">
-        <app-arrow-redirect
-          [emitAction]="LandingPageAction.FIFTH_CONTAINER"
-          [arrowDirection]="ArrowDirection.ARROW_DOWN"
-          (arrowAction)="changeAction($event)">
-        </app-arrow-redirect>
+      <div class="col-md-12 col-lg-4">
+        <div class="text-center">
+          <img src="./assets/img/icons/fee.png" width="100" height="100" alt="{{('public.components.fourth-step.second-container-alt' | transloco)}}" />
+          <h5 class="card-title h2">{{('public.components.fourth-step.second-container-title' | transloco)}}</h5>
+          <p class="card-text m-auto w-75">{{('public.components.fourth-step.second-container-text' | transloco)}}</p>
+        </div>
       </div>
+
+      <div class="col-md-12 col-lg-4">
+        <div class="text-center">
+          <img src="./assets/img/icons/lighting.png" width="100" height="100" alt="{{('public.components.fourth-step.third-container-alt' | transloco)}}" />
+          <h5 class="card-title h2">{{('public.components.fourth-step.third-container-title' | transloco)}}</h5>
+          <p class="card-text m-auto w-75">{{('public.components.fourth-step.third-container-text' | transloco)}}</p>
+        </div>
+      </div>
+  </div>
+
+  <div class="pb-4 position-relative bottom-0 start-50 translate-middle-x">
+    <div class="text-center">
+      <app-arrow-redirect
+        [emitAction]="LandingPageAction.FIFTH_CONTAINER"
+        [arrowDirection]="ArrowDirection.ARROW_DOWN"
+        (arrowAction)="changeAction($event)">
+      </app-arrow-redirect>
     </div>
   </div>
 </div>

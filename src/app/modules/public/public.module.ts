@@ -11,6 +11,7 @@ import { LandingHomeComponent } from './pages/landing-home/landing-home.componen
 import { ThirdStepComponent } from './components/landing-home/third-step/third-step.component';
 import { FifthStepComponent } from './components/landing-home/fifth-step/fifth-step.component';
 import { ArrowRedirectModule } from '../shared/arrow-redirect/arrow-redirect.module';
+import { SixthStepComponent } from './components/landing-home/sixth-step/sixth-step.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ArrowRedirectModule } from '../shared/arrow-redirect/arrow-redirect.mod
     ThirdStepComponent,
     FourthStepComponent,
     FifthStepComponent,
+    SixthStepComponent,
   ],
   imports: [
     PublicRoutingModule,

@@ -4,4 +4,5 @@ export enum LandingPageAction {
   THIRD_CONTAINER,
   FOURTH_CONTAINER,
   FIFTH_CONTAINER,
+  SIXTH_CONTAINER,
 }

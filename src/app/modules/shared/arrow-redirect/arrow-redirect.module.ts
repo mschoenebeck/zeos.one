@@ -12,6 +12,7 @@ import { ArrowRedirectComponent } from './components/arrow-redirect.component';
     CommonModule,
     TranslocoModule,
     RouterModule,
+    TranslocoModule,
   ],
   exports: [
     ArrowRedirectComponent,
