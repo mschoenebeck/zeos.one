@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
-    "format": "npx prettier --write ."
+    "format": "npx prettier --write .",
+    "deploy": "ng build --prod --base-href=/zeosone/"
   },
   "private": true,
   "dependencies": {
