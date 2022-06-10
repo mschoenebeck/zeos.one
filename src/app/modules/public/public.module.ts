@@ -10,6 +10,7 @@ import { PublicHomeComponent } from './pages/public-home/public-home.component';
 import { LandingHomeComponent } from './pages/landing-home/landing-home.component';
 import { ThirdStepComponent } from './components/landing-home/third-step/third-step.component';
 import { FifthStepComponent } from './components/landing-home/fifth-step/fifth-step.component';
+import { ArrowRedirectModule } from '../shared/arrow-redirect/arrow-redirect.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FifthStepComponent } from './components/landing-home/fifth-step/fifth-s
     PublicRoutingModule,
     NavigationBarModule,
     TranslocoModule,
+    ArrowRedirectModule,
     RouterModule,
   ],
   exports: [

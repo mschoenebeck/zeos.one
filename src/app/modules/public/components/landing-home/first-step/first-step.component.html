@@ -3,11 +3,7 @@
     <div class="d-grid text-center position-relative" style="top: -50px!important;">
       <p class="fw-bolder top-0 pb-4 title arcade-nospace">{{('public.components.first-step.title' | transloco)}}</p>
 
-
-      <span style="-webkit-box-shadow: 0px 185px 182px 141px rgba(9,0,255,1);
-        -moz-box-shadow: 0px 185px 182px 141px rgba(9,0,255,1);
-        box-shadow: 0px 185px 182px 141px rgba(9,0,255,1);">
-      </span>
+      <span class="blue-halo-small"></span>
 
       <img class="m-auto" src="./assets/img/icons/zeos_white.svg" width="341" height="341" alt="Token Logo Image" />
 
@@ -17,11 +13,11 @@
     </div>
   </div>
 
-  <div (click)="changeAction()" class="pb-4 position-absolute bottom-0 start-50 translate-middle-x">
-    <a class="text-light" [routerLink]="['/']">
-      <div class="animated bounce infinite">
-        <img title="Go to the next container" src="./assets/img/icons/arrow_down.svg" alt="Token Logo Image"/>
-      </div>
-    </a>
+  <div class="pb-4 position-absolute bottom-0 start-50 translate-middle-x">
+    <app-arrow-redirect
+      [emitAction]="LandingPageAction.SECOND_CONTAINER"
+      [arrowDirection]="ArrowDirection.ARROW_DOWN"
+      (arrowAction)="changeAction($event)">
+    </app-arrow-redirect>
   </div>
 </div>

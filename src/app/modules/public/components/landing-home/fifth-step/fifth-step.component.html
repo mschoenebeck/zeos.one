@@ -55,14 +55,14 @@
             </div>
           </div>
         </div>
-        <div (click)="changeAction()" class="pt-4 position-relative m-auto">
-          <a class="text-light" [routerLink]="['/']">
-            <div class="animated bounce infinite">
-              <img title="Go to the next container" src="./assets/img/icons/arrow_up.svg" alt="Token Logo Image"/>
-            </div>
-          </a>
-        </div>
 
+        <div class="pt-4 position-relative m-auto">
+          <app-arrow-redirect
+            [emitAction]="LandingPageAction.FIRST_CONTAINER"
+            [arrowDirection]="ArrowDirection.ARROW_UP"
+            (arrowAction)="changeAction($event)">
+          </app-arrow-redirect>
+        </div>
       </div>
     </div>
   </div>

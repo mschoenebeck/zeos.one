@@ -1,3 +1,4 @@
+import { ArrowDirection } from './../../../../shared/arrow-redirect/enum/arrow-direction.enum';
 import { LandingPageAction } from './../../../../shared/navigation-bar/enums/landing-page-action.enum';
 import { Component, EventEmitter, Output } from '@angular/core';
 
@@ -8,6 +9,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class FifthStepComponent {
   @Output() landingPageAction = new EventEmitter<LandingPageAction>();
+  public LandingPageAction = LandingPageAction;
+  ArrowDirection = ArrowDirection;
 
   constructor() { }
 
@@ -16,7 +19,7 @@ export class FifthStepComponent {
    *
    * @param landingPageAction LandingPageAction enum
    */
-  public changeAction() {
-    this.landingPageAction.emit(LandingPageAction.FIRST_CONTAINER);
+  public changeAction(event: any) {
+    this.landingPageAction.emit(event);
   }
 }

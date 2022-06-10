@@ -10,14 +10,12 @@
         </div>
 
       </div>
-      <div class="w-100 position-absolute bottom-0 start-50 translate-middle-x pb-4">
-        <div (click)="changeAction()" class="text-center">
-          <a class="text-light" [routerLink]="['/']">
-            <div class="animated bounce infinite">
-              <img title="Go to the next container" src="./assets/img/icons/arrow_down.svg" alt="Token Logo Image"/>
-            </div>
-          </a>
-        </div>
+      <div class="w-100 position-absolute bottom-0 start-50 translate-middle-x pb-4 text-center">
+        <app-arrow-redirect
+          [emitAction]="LandingPageAction.FOURTH_CONTAINER"
+          [arrowDirection]="ArrowDirection.ARROW_DOWN"
+          (arrowAction)="changeAction($event)">
+        </app-arrow-redirect>
       </div>
     </div>
   </div>
