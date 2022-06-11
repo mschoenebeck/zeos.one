@@ -1,39 +1,33 @@
-<div class="full-height text-light">
-  <div class="m-auto align-items-center justify-content-center h-100 bg-deep-dark">
-    <div class="row m-auto w-100 h-100 align-items-center">
-      <div class="d-grid text-center px-4 bg-deep-dark">
-        <div class="row m-auto justify-content-center mt-4 mb-4 w-75">
-          <p class="col-sm-12 fs-1 fw-bolder nerd pt-4 mt-4">{{('public.components.third-step.title' | transloco)}}</p>
-          <div class="col-sm-12 d-block p-2 border rounded mb-2">
-            <p class="fs-5 fw-bolder nerd p-0 m-0">{{('public.components.third-step.first-container-title' | transloco)}}</p>
-            <hr class="p-0 m-0">
-            <p class="card-text m-auto">{{('public.components.third-step.first-container-text' | transloco)}}</p>
-          </div>
-          <div class="col-sm-12 d-block p-2 border rounded mb-2">
-            <p class="fs-5 fw-bolder nerd">{{('public.components.third-step.second-container-title' | transloco)}}</p>
-            <hr class="p-0 m-0">
-            <p class="card-text m-auto">{{('public.components.third-step.second-container-text' | transloco)}}</p>
-          </div>
-          <div class="col-sm-12 d-block p-2 border rounded mb-2">
-            <p class="fs-5 fw-bolder nerd">{{('public.components.third-step.third-container-title' | transloco)}}</p>
-            <hr class="p-0 m-0">
-            <p class="card-text m-auto">{{('public.components.third-step.third-container-text' | transloco)}}</p>
-          </div>
-          <div class="col-sm-12 d-block p-2 border rounded mb-2">
-            <p class="fs-5 fw-bolder nerd">{{('public.components.third-step.fourth-container-title' | transloco)}}</p>
-            <hr class="p-0 m-0">
-            <p class="card-text m-auto">{{('public.components.third-step.fourth-container-text' | transloco)}}</p>
-          </div>
-        </div>
-        <div class="w-100 position-relative bottom-0 start-50 translate-middle-x text-center">
-          <app-arrow-redirect
-            [emitAction]="LandingPageAction.FOURTH_CONTAINER"
-            [arrowDirection]="ArrowDirection.ARROW_DOWN"
-            (arrowAction)="changeAction($event)">
-          </app-arrow-redirect>
-        </div>
+<div class="full-height bg-deep-dark position-relative text-light">
+  <div class="position-absolute top-50 start-50 translate-middle text-center w-75">
 
+    <div class="row g-0">
+      <p class="col-sm-12 fs-1 fw-bolder nerd">{{('public.components.third-step.title' | transloco)}}</p>
+      <div class="col-sm-12 d-block border rounded mb-1 w-100">
+        <p class="fs-5 fw-bolder nerd p-0 m-0">{{('public.components.third-step.first-container-title' | transloco)}}</p>
+        <hr class="p-0 m-0">
+        <p class="card-text m-auto p-1">{{('public.components.third-step.first-container-text' | transloco)}}</p>
+      </div>
+      <div class="col-sm-12 d-block border rounded mb-1">
+        <p class="fs-5 fw-bolder nerd">{{('public.components.third-step.second-container-title' | transloco)}}</p>
+        <hr class="p-0 m-0">
+        <p class="card-text m-auto p-1">{{('public.components.third-step.second-container-text' | transloco)}}</p>
+      </div>
+      <div class="col-sm-12 d-block border rounded mb-1">
+        <p class="fs-5 fw-bolder nerd">{{('public.components.third-step.third-container-title' | transloco)}}</p>
+        <hr class="p-0 m-0">
+        <p class="card-text m-auto p-1">{{('public.components.third-step.third-container-text' | transloco)}}</p>
+      </div>
+      <div class="col-sm-12 d-block border rounded mb-1">
+        <p class="fs-5 fw-bolder nerd">{{('public.components.third-step.fourth-container-title' | transloco)}}</p>
+        <hr class="p-0 m-0">
+        <p class="card-text m-auto p-1">{{('public.components.third-step.fourth-container-text' | transloco)}}</p>
       </div>
     </div>
   </div>
+  <app-arrow-redirect class="w-100 position-absolute bottom-0 start-50 translate-middle-x text-center pb-2"
+    [emitAction]="LandingPageAction.FOURTH_CONTAINER"
+    [arrowDirection]="ArrowDirection.ARROW_DOWN"
+    (arrowAction)="changeAction($event)">
+  </app-arrow-redirect>
 </div>
