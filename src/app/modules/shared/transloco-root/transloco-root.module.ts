@@ -23,7 +23,7 @@ export class TranslocoHttpLoader implements TranslocoLoader {
       return this.http.get<Translation>(`/${this.baseHref}/assets/i18n/${lang}.json`);
     }
     console.log(this.baseHref);
-    return this.http.get<Translation>(`/assets/i18n/${lang}.json`);
+    return this.http.get<Translation>(`assets/i18n/${lang}.json`);
   }
 }
 export function getBaseHref(platformLocation: PlatformLocation): string {
