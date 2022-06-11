@@ -20,7 +20,7 @@ export class TranslocoHttpLoader implements TranslocoLoader {
 
   getTranslation(lang: string) {
     if (environment.production) {
-      return this.http.get<Translation>(`${this.baseHref}/assets/i18n/${lang}.json`);
+      return this.http.get<Translation>(`${this.baseHref.replace('/', '')}/assets/i18n/${lang}.json`);
     }
     console.log(this.baseHref);
     return this.http.get<Translation>(`/assets/i18n/${lang}.json`);
