@@ -6,7 +6,9 @@
 #container {
   min-height: 350px!important;
 }
-
+.card-text {
+  min-height: 130px!important;
+}
 @media screen and (max-width: 1260px) {
   .row {
     width: 100%!important;
