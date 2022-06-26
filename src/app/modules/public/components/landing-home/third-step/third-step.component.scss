@@ -8,13 +8,7 @@
 }
 
 @media screen and (max-width: 1260px) {
-  .full-height {
-    height: 170vh!important;
-  }
-}
-
-@media screen and (max-width: 660px) {
-  .full-height {
-    height: 265vh!important;
+  .row {
+    width: 100%!important;
   }
 }

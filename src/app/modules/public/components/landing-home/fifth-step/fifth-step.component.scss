@@ -77,7 +77,6 @@ li {
   }
 }
 .time {
-  color: rgb(239, 239, 255);
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   @include mobile-and-up {
@@ -89,7 +88,6 @@ li {
   }
 }
 p {
-  color: #ffffff;
   font-family: sans-serif;
   line-height: .85;
   margin-top: 0.4rem;
