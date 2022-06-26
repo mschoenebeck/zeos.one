@@ -1,7 +1,8 @@
+<app-first-container
+  [emitAction]="LandingPageAction.FIRST_CONTAINER"
+  [arrowDirection]="ArrowDirection.ARROW_UP"
+  (landingPageAction)="changeAction($event)">
 
-
-<div class="full-height text-light">
-  <div class="full-height d-flex align-items-center justify-content-center bg-deep-dark position-relative">
     <div class="d-grid h-100 top-0 mx-2">
       <div class="w-100 m-auto mb-4">
         <p class="arcade fs-5 text-center fw-bolder pt-1 w-100 pb-4 nerd">{{('public.components.sixth-step.title' | transloco)}}</p>
@@ -53,14 +54,7 @@
           </div>
         </div>
 
-        <div class="pt-4 position-relative m-auto">
-          <app-arrow-redirect
-            [emitAction]="LandingPageAction.FIRST_CONTAINER"
-            [arrowDirection]="ArrowDirection.ARROW_UP"
-            (arrowAction)="changeAction($event)">
-          </app-arrow-redirect>
-        </div>
       </div>
     </div>
-  </div>
-</div>
+
+</app-first-container>

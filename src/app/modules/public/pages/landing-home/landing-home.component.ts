@@ -1,5 +1,5 @@
+import { LandingPageAction } from './../../../shared/components/navigation-bar/enums/landing-page-action.enum';
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { LandingPageAction } from 'src/app/modules/shared/navigation-bar/enums/landing-page-action.enum';
 
 @Component({
   selector: 'app-landing-home',

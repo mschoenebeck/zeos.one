@@ -1,0 +1,14 @@
+
+<div class="bg-deep-dark">
+  <div class="d-flex align-items-center justify-content-center full-height text-light">
+    <div class="align-middle" id="content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+
+  <app-arrow-redirect class="text-center"
+    [emitAction]="emitAction"
+    [arrowDirection]="arrowDirection"
+    (arrowAction)="changeAction($event)">
+  </app-arrow-redirect>
+</div>

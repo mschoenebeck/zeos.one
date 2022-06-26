@@ -1,4 +1,5 @@
-import { LandingPageAction } from 'src/app/modules/shared/navigation-bar/enums/landing-page-action.enum';
+import { LandingPageAction } from './../enums/landing-page-action.enum';
+
 import { Component, EventEmitter, HostListener, Output, ViewChild, ElementRef } from '@angular/core';
 
 @Component({

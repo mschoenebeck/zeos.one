@@ -6,9 +6,9 @@
     },
     "navigation-bar": {
       "first-item": "Home",
-      "second-item": "The Protocol",
+      "second-item": "Protocol",
       "third-item": "zAseets",
-      "fourth-item": "Tokens",
+      "fourth-item": "Token",
       "fifth-item": "Roadmap",
       "sixth-item": "Resources",
       "first-item-alt": "Token logo Image",
@@ -49,22 +49,22 @@
         "sixth-container-text": "Based on the latest zk-SNARK proving system of ZCash ZEOS' private transactions utilize the leading privacy technology of the entire blockchain space. ZEOS is one of the first crypto projects to adapt the new 'Halo 2' proving system which does not require the famous 'trusted setup' anymore."
       },
       "third-step": {
-        "title": "Z-ASSETS",
+        "title": " ",
         "first-container-alt": "Synthetic",
         "first-container-title": "Synthetic",
         "first-container-text": "zAssets are derivatives of real world assets like fiat currencies, precious metals, commodities or stocks. They can be minted and burned in exchange for collateral. As standard EOS fungible tokens they can be transferred and traded like any other asset on EOS.",
         "second-container-alt": "Fractionally-algorithmic",
         "second-container-title": "Fractionally-algorithmic",
         "second-container-text": "zAssets are not exclusively created by burning ZEOS. Instead, depending on the overall valuation of all zAssets in circulation and the ZEOS token itself the protocol maintains a pool of external collateral to reduce risk of becoming 'over-leveraged'.",
-        "third-container-alt": "Capital-efficient",
-        "third-container-title": "Capital-efficient",
+        "third-container-alt": "Governance Token",
+        "third-container-title": "Governance Token",
         "third-container-text": "The elastic token supply of ZEOS allows for more capital-efficiency when minting zAssets: There is no over-collateralization. Users who mint zAssets lock the exact same value in the protocol as they receive from the protocol in form of zAssets - or vice versa in case of burning. This is in contrast to collateralized dept positions (CDP) where several dollars of collateral need to be locked in order to create one dollar of CDP.",
         "fourth-container-alt": "Backed by ZEOS, EOS and Vigor",
         "fourth-container-title": "Backed by ZEOS, EOS and Vigor",
         "fourth-container-text": "Synthetic zAssets are backed not only by the ZEOS token itself but also external collateral: EOS and Vigor stable tokens get locked in case the demand of zAssets outpaces the growth of the ZEOS token. Minting and burning of zAssets always result in a different ratio of ZEOS, EOS and Vigor tokens that need to be added (or removed) depending on the current state of the protocol."
       },
       "fourth-step": {
-        "title": "TOKENS",
+        "title": " ",
         "first-container-alt": "Gas Token",
         "first-container-title": "Gas Token",
         "first-container-text": "The ZEOS token is the gas token that powers private access to the EOS ecosystem without EOS account. The amount of ZEOS which needs to be paid for a transaction depends on how many EOS blockchain resources the transaction consumes. This gives ZEOS a gas token character similar to Ether on Ethereum.",
@@ -76,7 +76,7 @@
         "third-container-text": "ZEOS is the governance token of the smart organization which governs the ZEOS ecosystem. Details about the governance tokenomics have not been finalized yet. It will most likely include a staking requirement for all members of the organization."
       },
       "fifth-step": {
-        "title": "ROADMAP",
+        "title": " ",
         "first-map-date": "5/10/2021",
         "first-map-text": "Airdrop",
         "second-map-date": "5/10/2021",
@@ -99,7 +99,7 @@
         "tenth-map-text": "Deployment to Mainnet (Private Transactions)"
       },
       "sixth-step": {
-        "title": "RESOURCES",
+        "title": " ",
         "whitepaper": "Whitepaper",
         "github": "Github repos",
         "powered-by": "Powered by",

@@ -1,4 +1,4 @@
-import { TranslocoRootModule } from './../shared/transloco-root/transloco-root.module';
+import { TranslocoRootModule } from './../shared/components/transloco-root/transloco-root.module';
 import { TranslocoModule } from '@ngneat/transloco';
 import { PrivateRoutingModule } from './private-routing.module';
 import { PrivateHomeComponent } from './pages/private-home/private-home.component';

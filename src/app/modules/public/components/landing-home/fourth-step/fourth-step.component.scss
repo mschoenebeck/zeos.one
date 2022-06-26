@@ -1,9 +1,11 @@
 .full-height {
   height: 100vh!important;
 }
+
 .title {
   margin-top: 5.5rem!important;
 }
+
 @media screen and (max-width: 1260px) {
   .full-height {
     height: 140vh!important;
@@ -12,6 +14,10 @@
 
 @media screen and (max-width: 660px) {
   .full-height {
-    height: 155vh!important;
+    height: 165vh!important;
   }
+}
+
+#container {
+  min-height: 400px;
 }

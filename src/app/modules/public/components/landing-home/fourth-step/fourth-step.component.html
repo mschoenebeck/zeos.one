@@ -1,40 +1,35 @@
+<app-first-container
+  [emitAction]="LandingPageAction.FIFTH_CONTAINER"
+  [arrowDirection]="ArrowDirection.ARROW_DOWN"
+  (landingPageAction)="changeAction($event)">
 
+  <!-- START of Content -->
 
-<div class="full-height bg-deep-dark position-relative text-light">
-  <div class="position-absolute top-0 start-0 translate-top w-100 text-center title">
-    <p class="fs-1 fw-bolder nerd">{{('public.components.fourth-step.title' | transloco)}}</p>
-  </div>
-  <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
-
-    <div class="row g-0">
+    <div class="row g-0 text-center w-100">
       <div class="col-md-12 col-lg-4 pt-4 px-2">
-        <div class="text-center border rounded">
-          <img src="./assets/img/icons/anonymous.png" width="100" height="100" alt="{{('public.components.fourth-step.first-container-alt' | transloco)}}"/>
+        <div class="text-center border rounded m-auto" id="container">
+          <img class="my-4" src="./assets/img/icons/anonymous.png" width="100" height="100" alt="{{('public.components.fourth-step.first-container-alt' | transloco)}}"/>
           <h5 class="card-title h2">{{('public.components.fourth-step.first-container-title' | transloco)}}</h5>
-          <p class="card-text m-auto w-75">{{('public.components.fourth-step.first-container-text' | transloco)}}</p>
+          <p class="card-text m-auto w-75 py-4">{{('public.components.fourth-step.first-container-text' | transloco)}}</p>
         </div>
       </div>
 
       <div class="col-md-12 col-lg-4 pt-4 px-2">
-        <div class="text-center border rounded">
-          <img src="./assets/img/icons/fee.png" width="100" height="100" alt="{{('public.components.fourth-step.second-container-alt' | transloco)}}" />
+        <div class="text-center border rounded" id="container">
+          <img class="my-4" src="./assets/img/icons/fee.png" width="100" height="100" alt="{{('public.components.fourth-step.second-container-alt' | transloco)}}" />
           <h5 class="card-title h2">{{('public.components.fourth-step.second-container-title' | transloco)}}</h5>
-          <p class="card-text m-auto w-75">{{('public.components.fourth-step.second-container-text' | transloco)}}</p>
+          <p class="card-text m-auto w-75 py-4">{{('public.components.fourth-step.second-container-text' | transloco)}}<br>ㅤ</p>
         </div>
       </div>
 
       <div class="col-md-12 col-lg-4 pt-4 px-2">
-        <div class="text-center border rounded">
-          <img src="./assets/img/icons/lighting.png" width="100" height="100" alt="{{('public.components.fourth-step.third-container-alt' | transloco)}}" />
+        <div class="text-center border rounded" id="container">
+          <img class="my-4" src="./assets/img/icons/lighting.png" width="100" height="100" alt="{{('public.components.fourth-step.third-container-alt' | transloco)}}" />
           <h5 class="card-title h2">{{('public.components.fourth-step.third-container-title' | transloco)}}</h5>
-          <p class="card-text m-auto w-75">{{('public.components.fourth-step.third-container-text' | transloco)}}<br>ㅤ</p>
+          <p class="card-text m-auto w-75 py-4">{{('public.components.fourth-step.third-container-text' | transloco)}}<br>ㅤ</p>
         </div>
       </div>
     </div>
-  </div>
-  <app-arrow-redirect class="w-100 position-absolute bottom-0 start-50 translate-middle-x text-center pb-2"
-    [emitAction]="LandingPageAction.FIFTH_CONTAINER"
-    [arrowDirection]="ArrowDirection.ARROW_DOWN"
-    (arrowAction)="changeAction($event)">
-  </app-arrow-redirect>
-</div>
+
+  <!-- END of Content -->
+</app-first-container>

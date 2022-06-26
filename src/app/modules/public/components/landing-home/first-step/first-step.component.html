@@ -1,23 +1,20 @@
-<div class="full-height text-light">
-  <div class="full-height d-flex align-items-center justify-content-center bg-deep-dark ">
-    <div class="d-grid text-center position-relative" style="top: -50px!important;">
-      <p class="fw-bolder top-0 pb-4 title arcade-nospace">{{('public.components.first-step.title' | transloco)}}</p>
+<app-first-container
+  [emitAction]="LandingPageAction.SECOND_CONTAINER"
+  [arrowDirection]="ArrowDirection.ARROW_DOWN"
+  (landingPageAction)="changeAction($event)">
 
-      <span class="blue-halo-small"></span>
+  <!-- START of Content -->
+  <div class="text-center">
+    <p class="fw-bolder top-0 pb-4 title arcade-nospace">{{('public.components.first-step.title' | transloco)}}</p>
 
-      <img class="m-auto" src="./assets/img/icons/zeos_white.svg" width="341" height="341" alt="{{('public.components.first-step.token-logo-alt' | transloco)}}" />
+    <span class="blue-halo-small"></span>
 
-      <div class="w-100 p-2 pt-4">
-        <span class="text-capitalize fw-bolder bg-transparent subtitle nerd">{{('public.components.first-step.hashtag-privacy-matters' | transloco)}}</span>
-      </div>
+    <img class="m-auto" src="./assets/img/icons/zeos_white.svg" width="341" height="341" alt="{{('public.components.first-step.token-logo-alt' | transloco)}}" />
+
+    <div class="w-100 p-2 pt-4">
+      <span class="text-capitalize fw-bolder bg-transparent subtitle nerd">{{('public.components.first-step.hashtag-privacy-matters' | transloco)}}</span>
     </div>
   </div>
+  <!-- END of Content -->
 
-  <div class="pb-4 position-absolute bottom-0 start-50 translate-middle-x">
-    <app-arrow-redirect
-      [emitAction]="LandingPageAction.SECOND_CONTAINER"
-      [arrowDirection]="ArrowDirection.ARROW_DOWN"
-      (arrowAction)="changeAction($event)">
-    </app-arrow-redirect>
-  </div>
-</div>
+</app-first-container>

@@ -1,4 +1,5 @@
-import { environment } from './../../../../environments/environment';
+import { environment } from './../../../../../environments/environment.prod';
+
 import { HttpClient } from '@angular/common/http';
 import {
   TRANSLOCO_LOADER,

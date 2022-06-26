@@ -1,5 +1,5 @@
-import { ArrowDirection } from './../../../../shared/arrow-redirect/enum/arrow-direction.enum';
-import { LandingPageAction } from 'src/app/modules/shared/navigation-bar/enums/landing-page-action.enum';
+import { ArrowDirection } from './../../../../shared/components/arrow-redirect/enum/arrow-direction.enum';
+import { LandingPageAction } from './../../../../shared/components/navigation-bar/enums/landing-page-action.enum';
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
@@ -20,6 +20,7 @@ export class FirstStepComponent {
    * @param landingPageAction LandingPageAction enum
    */
   public changeAction(event: any) {
+    console.log(event);
     this.landingPageAction.emit(event);
   }
 }
