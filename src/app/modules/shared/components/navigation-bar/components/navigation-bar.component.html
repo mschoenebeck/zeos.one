@@ -2,7 +2,12 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-deep-dark p-2 m-0 d-none animated fadeIn" style="box-shadow: 0 6px 6px 0 rgba(0,0,0,.55);" #navbar>
   <div class="px-4 w-auto text-center m-auto">
     <a [routerLink]="['/']">
-      <img class="d-inline-block align-top m-auto animated pulse infinite" title="{{('shared.navigation-bar.first-item-title' | transloco)}}" (click)="changeAction(LandingPageAction.FIRST_CONTAINER)" src="./assets/img/icons/zeos_white.svg" width="50" height="50" alt="{{('shared.navigation-bar.first-item-alt' | transloco)}}"/>
+      <img class="d-inline-block align-top m-auto animated pulse" title="{{('shared.navigation-bar.first-item-title' | transloco)}}"
+        src="./assets/img/icons/zeos_white.svg" width="50" height="50" alt="{{('shared.navigation-bar.first-item-alt' | transloco)}}"
+        (click)="changeAction(LandingPageAction.FIRST_CONTAINER)"
+        [class.infinite]="mouseOvered"
+        (mouseover)="mouseOvered=true"
+        (mouseout)="mouseOvered=false"/>
     </a>
   </div>
 

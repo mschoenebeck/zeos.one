@@ -7,6 +7,7 @@ export class HoverClassDirective {
   @Input('hover-class') hoverClass: any;
 
   @HostListener('mouseenter') onMouseEnter() {
+    console.log('hahahahaha');
     this.elementRef.nativeElement.classList.add(this.hoverClass);
   }
 
@@ -14,5 +15,7 @@ export class HoverClassDirective {
     this.elementRef.nativeElement.classList.remove(this.hoverClass);
   }
 
-  constructor(public elementRef: ElementRef) { }
+  constructor(public elementRef: ElementRef) {
+    console.log('xd');
+  }
 }

@@ -13,6 +13,7 @@ export class NavigationBarComponent {
 
   public LandingPageAction = LandingPageAction;
   public expanded: boolean = false;
+  public mouseOvered: boolean = false;
 
   get hostElement(): HTMLElement {
     return this.navbarElement?.nativeElement;
