@@ -87,6 +87,15 @@ li {
     font-size: 0.85rem;
   }
 }
+.nerd {
+  @include mobile-and-up {
+    font-size: 1.07rem!important;
+  }
+  @include mobile-only {
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem!important;
+  }
+}
 p {
   font-family: sans-serif;
   line-height: .85;
