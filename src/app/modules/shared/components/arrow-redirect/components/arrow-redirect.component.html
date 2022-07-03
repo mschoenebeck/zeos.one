@@ -1,6 +1,6 @@
 <div (click)="changeAction()">
   <a class="text-light" [routerLink]="this.urlToRedirect">
-    <div class="animated bounce">
+    <div class="arrow-wrapper">
       <div *ngIf="arrowDirection === ArrowDirection.ARROW_UP; then arrowUp else arrowDown">here is ignored</div>
       <ng-template #arrowUp>
         <div class="arrow arrow-up">

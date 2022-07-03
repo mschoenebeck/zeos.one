@@ -1,5 +1,13 @@
+
 .arrow-up {
   transform: rotate(180deg)!important;
+}
+
+.arrow-wrapper {
+  animation-duration: 0s;
+  animation-fill-mode: both;
+  animation-name: bounce!important;
+  transform-origin: center bottom!important;
 }
 .arrow {
   position: absolute;
