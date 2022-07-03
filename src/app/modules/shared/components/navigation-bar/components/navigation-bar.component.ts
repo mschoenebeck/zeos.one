@@ -35,9 +35,10 @@ export class NavigationBarComponent {
     if (window.scrollY > 200) {
       this.hostElement.classList.remove('d-none');
       this.hostElement.classList.remove('fadeOut');
+      this.hostElement.classList.remove('inactiveLink');
       this.hostElement.classList.add('fadeIn');
     } else {
-      this.hostElement.classList.add('d-none');
+      this.hostElement.classList.add('inactiveLink');
       this.hostElement.classList.remove('fadeIn');
       this.hostElement.classList.add('fadeOut');
     }

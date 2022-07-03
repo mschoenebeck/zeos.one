@@ -8,3 +8,7 @@
 img:hover {
   filter: invert(35%) sepia(62%) saturate(4818%) hue-rotate(208deg) brightness(99%) contrast(103%);
 }
+.inactiveLink {
+  pointer-events: none;
+  cursor: default;
+}
