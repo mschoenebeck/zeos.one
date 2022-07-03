@@ -37,6 +37,7 @@ export class NavigationBarComponent {
       this.hostElement.classList.remove('fadeOut');
       this.hostElement.classList.add('fadeIn');
     } else {
+      this.hostElement.classList.add('d-none');
       this.hostElement.classList.remove('fadeIn');
       this.hostElement.classList.add('fadeOut');
     }
