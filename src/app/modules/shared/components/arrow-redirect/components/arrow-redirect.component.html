@@ -1,12 +1,24 @@
 <div (click)="changeAction()">
   <a class="text-light" [routerLink]="this.urlToRedirect">
-    <div class="animated bounce infinite">
+    <div class="animated bounce">
       <div *ngIf="arrowDirection === ArrowDirection.ARROW_UP; then arrowUp else arrowDown">here is ignored</div>
       <ng-template #arrowUp>
-        <img title="Go to the previous container" src="./assets/img/icons/arrow_up.svg" alt="{{('shared.arrow-redirect.arrow-up-alt') | transloco}}"/>
+        <div class="arrow arrow-up">
+          <a href="#features">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
       </ng-template>
       <ng-template #arrowDown>
-        <img title="Go to the next container" src="./assets/img/icons/arrow_down.svg" alt="{{('shared.arrow-redirect.arrow-down-alt') | transloco}}"/>
+        <div class="arrow">
+          <a href="#features">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
       </ng-template>
     </div>
   </a>
