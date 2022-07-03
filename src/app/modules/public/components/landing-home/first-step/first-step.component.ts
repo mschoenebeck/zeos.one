@@ -20,7 +20,6 @@ export class FirstStepComponent {
    * @param landingPageAction LandingPageAction enum
    */
   public changeAction(event: any) {
-    console.log(event);
     this.landingPageAction.emit(event);
   }
 }
