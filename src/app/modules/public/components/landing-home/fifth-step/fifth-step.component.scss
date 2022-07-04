@@ -54,7 +54,7 @@ h1 {
 }
 li {
   padding-bottom: 0.5rem;
-  border-left: 1px solid rgba(9,0,255,1);
+  border-left: 1px solid rgb(255, 255, 255);
   position: relative;
   padding-left: 20px;
   margin-left: 10px;
@@ -66,10 +66,10 @@ li {
     content: "";
     width: 15px;
     height: 15px;
-    background: rgb(255, 255, 255);
-    border: 1px solid #4e5ed3;
-    box-shadow: 3px 3px 0px rgba(9,0,255,1);
-    box-shadow: 3px 3px 0px rgba(9,0,255,1);
+    background: rgba(9,0,255,1);
+    border: 1px solid #ffffff;
+    box-shadow: 3px 3px 0px rgb(255, 255, 255);
+    box-shadow: 3px 3px 0px rgb(255, 255, 255);
     border-radius: 50%;
     position: absolute;
     left: -10px;
