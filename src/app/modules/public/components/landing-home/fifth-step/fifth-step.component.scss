@@ -1,13 +1,7 @@
-.full-height {
-  height: 100vh !important;
-}
 
-@media screen and (max-width: 660px) {
-  .full-height {
-    min-height: 125vh !important;
+  .roadmap-container {
+    padding-bottom: 150px!important;
   }
-}
-
 @mixin tablet-and-up {
   @media screen and (min-width: 769px) {
     @content;
@@ -105,8 +99,17 @@ p {
   }
 }
 
+@media screen and (max-width: 1260px) {
+  .roadmap-container {
+    padding-bottom: 0px!important;
+  }
+}
+
 @media screen and (max-width: 660px) {
   .row {
     width: 85%!important;
+  }
+  .roadmap-container {
+    padding-bottom: 0px!important;
   }
 }

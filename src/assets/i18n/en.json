@@ -11,7 +11,7 @@
       "fourth-item": "Token",
       "fifth-item": "Roadmap",
       "sixth-item": "Resources",
-      "seventh-item": "Wallet (WIP)",
+      "seventh-item": "Wallet",
 
       "first-item-title": "Go to Home",
       "second-item-title": "Go to zAseets",
@@ -19,7 +19,7 @@
       "fourth-item-title": "Go to Token",
       "fifth-item-title": "Go to Roadmap",
       "sixth-item-title": "Go to Resources",
-      "seventh-item-title": "Wallet (currently on development)"
+      "seventh-item-title": "Wallet"
     }
   },
   "public": {
@@ -78,26 +78,57 @@
       },
       "fifth-step": {
         "title": " ",
-        "first-map-date": "5/10/2021",
+        "first-map-date": "12/25/2021",
         "first-map-text": "Airdrop",
-        "second-map-date": "5/10/2021",
+        "first-map-link": "https://t.me/ZeosOnEos/5117",
+
+        "second-map-date": "01/09/2022",
         "second-map-text": "ZCash Sapling Verifier on Kylin Testnet",
-        "third-map-date": "5/10/2021",
-        "third-map-text": "ZEOS demo app on Kylin Testnet (proof of concept)",
-        "fourth-map-date": "5/10/2021",
-        "fourth-map-text": "Whitepaper",
-        "fifth-map-date": "5/10/2021",
-        "fifth-map-text": "Upgrade Verifier to 'Halo 2' proving system",
-        "sixth-map-date": "5/10/2021",
-        "sixth-map-text": "Full Protocol Specification (Private Transactions)",
-        "seventh-map-date": "5/10/2021",
-        "seventh-map-text": "Deployment to Testnet (Private Transactions)",
-        "eighth-map-date": "5/10/2021",
-        "eighth-map-text": "zAssets Protocol Specification",
-        "nineth-map-date": "5/10/2021",
-        "nineth-map-text": "Deployment to Testnet (zAssets)",
-        "tenth-map-date": "5/10/2021",
-        "tenth-map-text": "Deployment to Mainnet (Private Transactions)"
+        "second-map-link": "https://t.me/ZeosOnEos/9258",
+
+        "third-map-date": "02/17/2022",
+        "third-map-text": "First private transaction on Kylin Testnet",
+        "third-map-link": "https://t.me/ZeosOnEos/12675",
+
+        "fourth-map-date": "03/19/2022",
+        "fourth-map-text": "Demo application launch on Kylin Testnet",
+        "fourth-map-link": "https://t.me/ZeosOnEos/13643",
+
+        "fifth-map-date": "06/20/2022",
+        "fifth-map-text": "ZEOS Whitepaper",
+        "fifth-map-link": "https://t.me/ZeosOnEos/17478",
+
+        "sixth-map-date": "07/05/2022",
+        "sixth-map-text": "Website Upgrade",
+        "sixth-map-link": "./",
+
+        "seventh-map-date": "Q3 2022",
+        "seventh-map-text": "Zcash Orchard Verifier (Halo 2) on Kylin Testnet",
+        "seventh-map-link": "./",
+
+        "eighth-map-date": "Q3 2022",
+        "eighth-map-text": "Full Protocol Specification",
+        "eighth-map-link": "./",
+
+        "nineth-map-date": "Q3 2022",
+        "nineth-map-text": "2nd Protocol Demo Application (feature complete) on Kylin Testnet",
+        "nineth-map-link": "./",
+
+        "tenth-map-date": "Q4 2022",
+        "tenth-map-text": "zAssets Specification + Demo Application",
+        "tenth-map-link": "./",
+
+        "eleventh-map-date": "Q4 2022",
+        "eleventh-map-text": "Finalizing of ZEOS Governance/Staking Tokenomics",
+        "eleventh-map-link": "./",
+
+        "twelfth-map-date": "Q4 2022",
+        "twelfth-map-text": "Transactions without EOS Account/ZEOS Proxy Specification",
+        "twelfth-map-link": "./",
+
+        "thirteenth-map-date": "Q1 2023",
+        "thirteenth-map-text": "Protocol Rollout on EOS Mainnet",
+        "thirteenth-map-link": "./"
       },
       "sixth-step": {
         "title": " ",
