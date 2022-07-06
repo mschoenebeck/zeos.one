@@ -18,6 +18,7 @@ export class AppComponent {
     );
     navEndEvent$.subscribe((e) => {
       gtag('config', 'G-3HEYMKXXSC', { 'page_path': (<NavigationEnd>e).urlAfterRedirects });
+      console.log(e);
     });
   }
 }
