@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment.prod';
 import { PublicModule } from './modules/public/public.module';
 import { PrivateModule } from './modules/private/private.module';
 import { NgModule } from '@angular/core';
@@ -16,7 +17,7 @@ import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-go
     AppRoutingModule,
     PrivateModule,
     PublicModule,
-    NgxGoogleAnalyticsModule.forRoot('G-RE4WSQGJTE'),
+    NgxGoogleAnalyticsModule.forRoot(environment.ga),
     NgxGoogleAnalyticsRouterModule,
     HttpClientModule,
   ],
