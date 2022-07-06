@@ -1,8 +1,9 @@
+import { environment } from './../environments/environment.prod';
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { filter } from 'rxjs';
 
-declare const gtag: any;
+declare let gtag: (property: string, value: any, configs: any) => {};
+
 
 @Component({
   selector: 'app-root',
@@ -12,13 +13,13 @@ declare const gtag: any;
 export class AppComponent {
   title = 'zeosone';
 
-  constructor(private router: Router) {
-    const navEndEvent$ = router.events.pipe(
-        filter((e) => e instanceof NavigationEnd),
-    );
-    navEndEvent$.subscribe((e) => {
-      gtag('config', 'G-3HEYMKXXSC', { 'page_path': (<NavigationEnd>e).urlAfterRedirects });
-      console.log(e);
+  constructor(public router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        gtag('config', environment.gaId, {
+          page_path: event.urlAfterRedirects,
+        });
+      }
     });
   }
 }

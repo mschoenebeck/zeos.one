@@ -1,5 +1,5 @@
 export const environment = {
   baseUrl: 'http://localhost:4200',
   production: true,
-  ga: 'G-3HEYMKXXSC',
+  gaId: 'UA-233759875-1',
 };
