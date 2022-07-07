@@ -26,12 +26,12 @@ export class NavigationBarComponent {
    *
    * @param landingPageAction LandingPageAction enum
    */
-  public changeAction(landingPageAction: LandingPageAction) {
+  public changeAction(landingPageAction: LandingPageAction): void {
     this.landingPageAction.emit(landingPageAction);
   }
 
   @HostListener('window:scroll', ['$event']) // for window scroll events
-  private onScroll() {
+  private onScroll(): void {
     if (window.scrollY > 200) {
       this.hostElement.classList.remove('d-none');
       this.hostElement.classList.remove('fadeOut');
@@ -43,5 +43,9 @@ export class NavigationBarComponent {
       this.hostElement.classList.remove('fadeIn');
       this.hostElement.classList.add('fadeOut');
     }
+  }
+
+  public openWallet(): void {
+    window.open('https://zeos.one/wallet');
   }
 }
