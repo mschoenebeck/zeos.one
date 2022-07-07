@@ -22,4 +22,8 @@ export class SixthStepComponent {
   public changeAction(event: any) {
     this.landingPageAction.emit(event);
   }
+
+  public openWallet(): void {
+    window.open('https://zeos.one/wallet');
+  }
 }
