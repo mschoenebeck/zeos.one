@@ -1,3 +1,5 @@
+import { AppRoutes } from './../../../../../app-routes.enum';
+import { PrivateRoutes } from './../../../../private/private-routes.enum';
 import { LandingPageAction } from './../enums/landing-page-action.enum';
 
 import { Component, EventEmitter, HostListener, Output, ViewChild, ElementRef } from '@angular/core';
@@ -43,5 +45,13 @@ export class NavigationBarComponent {
       this.hostElement.classList.remove('fadeIn');
       this.hostElement.classList.add('fadeOut');
     }
+  }
+
+  public openWallet(): void {
+    this.navigate(AppRoutes.private + '/' + PrivateRoutes.wallet);
+  }
+
+  private navigate(url: string) {
+    window.open(url);
   }
 }

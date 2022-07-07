@@ -8,15 +8,15 @@ const routes: Routes = [
   { path: PublicRoutes.default, component: PublicHomeComponent, children: [
     { path: PublicRoutes.default, redirectTo: PublicRoutes.home, pathMatch: 'full' },
     { path: PublicRoutes.default, component: LandingHomeComponent },
-  ]}
+  ]},
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
   ],
   exports: [
-    RouterModule
-  ]
+    RouterModule,
+  ],
 })
 export class PublicRoutingModule { }
