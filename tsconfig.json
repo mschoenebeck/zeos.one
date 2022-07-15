@@ -22,6 +22,7 @@
     "target": "es2017",
     "module": "es2020",
     "allowJs": true,
+    "allowSyntheticDefaultImports": true,
     "paths": {
       "stream": ["./node_modules/readable-stream"]
     },

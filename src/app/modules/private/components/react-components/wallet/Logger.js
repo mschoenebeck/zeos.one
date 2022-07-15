@@ -14,7 +14,8 @@ export default function Logger({logs})
         }
     });
 
-    return (
+    /*
+
         <div className='logger-wrapper'>
         <div className='header'><InputLabel>Session Log</InputLabel></div>
         <div id='logger'>
@@ -23,5 +24,12 @@ export default function Logger({logs})
             </div>
         </div>
         </div>
+         */
+    return (
+
+      <div className='logger-wrapper'>
+      <div className='header'><InputLabel>Session Log</InputLabel></div>
+
+      </div>
     )
 }
