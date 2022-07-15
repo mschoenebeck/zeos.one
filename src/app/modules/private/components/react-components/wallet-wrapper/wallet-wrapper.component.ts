@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import * as AppConst from '../wallet/App.js';
+import App from '../wallet/App';
 
 @Component({
   selector: 'app-wallet-wrapper',
@@ -25,9 +25,8 @@ export class WalletWrapperComponent implements OnChanges, AfterViewInit, OnDestr
   }
 
   private render(): void {
-
     ReactDOM.render(
-      React.createElement(AppConst),
+      React.createElement(App),
       document.getElementById(this.rootId)
     )
   }

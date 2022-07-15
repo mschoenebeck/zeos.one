@@ -1,29 +1,24 @@
 import * as React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 import { Ledger } from 'ual-ledger'
 import { Lynx } from 'ual-lynx'
-//import { Scatter } from 'ual-scatter'
 import { Anchor } from 'ual-anchor'
 import { UALProvider, withUAL } from 'ual-reactjs-renderer'
 import { JsonRpc } from 'eosjs'
-import { createClient } from "@liquidapps/dapp-client";
-import { Asset } from '@greymass/eosio'
 import { saveAs } from 'file-saver';
 import { base58_to_binary } from 'base58-js'
-
-import KeyManagement from './components/KeyManagement'
-import UALLogin from './components/UALLogin'
-import TransactionInterface from './components/TransactionInterface'
-import TransactionHistory from './components/TransactionHistory'
-import Header from './components/Header'
-import Logger from './components/Logger'
-
-import { Button, InputLabel } from '@material-ui/core'
+import UALLogin from './UALLogin'
+import TransactionInterface from './TransactionInterface'
+import TransactionHistory from './TransactionHistory'
+import Header from './Header'
+import Logger from './Logger'
+import { InputLabel } from '@material-ui/core'
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+import KeyManagement from './KeyManagement'
 
 const theme = createTheme({
   palette: {
@@ -973,4 +968,3 @@ const App = () =>
 }
 
 export default App;
-module.exports.App;
