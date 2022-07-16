@@ -24,6 +24,7 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+import { zeos_create_key } from './RustWasm'
 
 const theme = createTheme({
   palette: {
