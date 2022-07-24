@@ -19,33 +19,44 @@ export class LandingHomeComponent {
   public changeUserLocation(landingPageAction: LandingPageAction) {
     switch (+landingPageAction) {
       case LandingPageAction.FIRST_CONTAINER:
-        this.firstStep?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        this.scrollIntoContainerView(this.firstStep, 0);
 
         break;
       case LandingPageAction.SECOND_CONTAINER:
-        this.secondStep?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        this.scrollIntoContainerView(this.secondStep, this.isMobile() ? 0 : 0);
 
         break;
       case LandingPageAction.THIRD_CONTAINER:
-        this.thirdStep?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        this.scrollIntoContainerView(this.thirdStep, this.isMobile() ? 0 : 0);
 
         break;
       case LandingPageAction.FOURTH_CONTAINER:
-        this.fourthStep?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        this.scrollIntoContainerView(this.fourthStep, this.isMobile() ? 0: 0);
 
         break;
       case LandingPageAction.FIFTH_CONTAINER:
-        this.fifthStep?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        this.scrollIntoContainerView(this.fifthStep, this.isMobile() ? 0: 0);
 
         break;
       case LandingPageAction.SIXTH_CONTAINER:
-        this.sixthStep?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        this.scrollIntoContainerView(this.sixthStep, this.isMobile() ? 0: 0);
 
         break;
       default:
-        this.firstStep?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        this.scrollIntoContainerView(this.firstStep, 0);
 
         break;
+    }
+  }
+
+  private isMobile(): boolean {
+    return ('ontouchstart' in document.documentElement);
+  }
+
+  private scrollIntoContainerView(step: ElementRef | undefined, offset: number): void {
+    if (step) {
+      const y = step?.nativeElement.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
   }
 }

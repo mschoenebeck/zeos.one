@@ -35,6 +35,19 @@
   animation-delay: -0.4s;
 }
 
+@media screen and (max-width: 1260px) {
+  .arrow {
+    bottom: -65px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .arrow span {
+    width: 27px!important;
+    height: 27px!important;
+    margin: -7px;
+  }
+}
+
 @keyframes animate {
   0% {
     opacity: 0;

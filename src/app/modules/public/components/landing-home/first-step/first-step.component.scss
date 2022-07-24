@@ -10,18 +10,84 @@
   font-size: 2.41em!important;
 }
 .blue-halo-small {
-  -webkit-box-shadow: 150px 0px 182px 141px rgba(9, 0, 255, 1)!important;;
-  -moz-box-shadow: 150px 0px 182px 141px rgba(9, 0, 255, 1)!important;;
-  box-shadow: 150px 0px 182px 141px rgba(9, 0, 255, 1)!important;;
+  -webkit-box-shadow: 110px 0px 182px 141px rgba(9, 0, 255, 1)!important;
+  -moz-box-shadow: 110px 0px 182px 141px rgba(9, 0, 255, 1)!important;
+  box-shadow: 110px 0px 182px 141px rgba(9, 0, 255, 1)!important;
 }
-@media screen and (max-width: 660px) {
+.zeos-logo {
+  width: 341px;
+  height: 341px;
+}
+
+
+@media screen and (min-width: 1260px) {
+  .title {
+    font-size: 9.5vh!important;
+  }
+  .zeos-logo {
+    width: 30vh;
+    height: 30vh;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  /* tablets and desktop */
   .full-height {
     min-height: 100vh!important;
   }
   .title {
-    font-size: 5.41rem!important;
+    font-size: 9.5vh!important;
+    z-index: 1;
   }
-  .subtitle {
-    font-size: 1.41em!important;
+  .zeos-logo {
+    width: 30vh;
+    height: 30vh;
+  }
+  .blue-halo-small {
+    -webkit-box-shadow: 140px 0px 182px 141px rgba(9, 0, 255, 1)!important;
+    -moz-box-shadow: 140px 0px 182px 141px rgba(9, 0, 255, 1)!important;
+    box-shadow: 140px 0px 182px 141px rgba(9, 0, 255, 1)!important;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  /* phones */
+  .full-height {
+    min-height: 100vh!important;
+  }
+  .title {
+    font-size: 9.5vh!important;
+    z-index: 1;
+  }
+  .zeos-logo {
+    width: 30vh;
+    height: 30vh;
+  }
+  .blue-halo-small {
+    -webkit-box-shadow: 140px 0px 182px 141px rgba(9, 0, 255, 1)!important;
+    -moz-box-shadow: 140px 0px 182px 141px rgba(9, 0, 255, 1)!important;
+    box-shadow: 140px 0px 182px 141px rgba(9, 0, 255, 1)!important;
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  /* portrait phones */
+  .full-height {
+    min-height: 100vh!important;
+  }
+  .title {
+    font-size: 9.5vh!important;
+    z-index: 1;
+  }
+  .zeos-logo {
+    width: 30vh;
+    height: 30vh;
+  }
+  .blue-halo-small {
+    -webkit-box-shadow: 140px 0px 182px 141px rgba(9, 0, 255, 1)!important;
+    -moz-box-shadow: 140px 0px 182px 141px rgba(9, 0, 255, 1)!important;
+    box-shadow: 140px 0px 182px 141px rgba(9, 0, 255, 1)!important;
+  }
+}
+
