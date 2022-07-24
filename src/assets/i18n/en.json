@@ -137,7 +137,13 @@
         "powered-by": "Powered by",
         "join-uson": "Join us on",
         "sponsoredby": "Sponsored by",
-        "test-net-demo": "Testnet Demo"
+        "test-net-demo": "Testnet Demo",
+        "eos-image-alt": "Eos logo link",
+        "dapp-image-alt": "Dapp logo link",
+        "telegram-image-alt": "Telegram logo link",
+        "discord-image-alt": "Discord logo link",
+        "github-image-alt": "Github logo link",
+        "eden-eos-image-alt": "Eden on Eos logo link"
       }
     }
   }
