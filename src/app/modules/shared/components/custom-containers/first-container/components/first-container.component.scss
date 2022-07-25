@@ -8,13 +8,16 @@ app-arrow-redirect {
 }
 #content {
   z-index: 0;
-  padding-top: 2%;
 }
+
 @media screen and (max-width: 1260px) {
   app-arrow-redirect {
     margin-top: 2%!important;
     padding-top: 2%!important;
     position: relative!important;
     bottom: 50px!important;
+  }
+  #content {
+    padding-bottom: 35%!important;
   }
 }
