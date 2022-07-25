@@ -1,6 +1,3 @@
-.full-height {
-  height: 120vh!important;
-}
 .blue-halo-big {
   -webkit-box-shadow: 50px 25px 300px 40px rgba(9,0,255,1);
   -moz-box-shadow: 50px 25px 300px 40px rgba(9,0,255,1);
@@ -9,8 +6,5 @@
 @media screen and (max-width: 1260px) {
   .card-text {
     font-size: calc(14px + .9vw)!important;
-  }
-  .full-height {
-    min-height: 375vh!important;
   }
 }
