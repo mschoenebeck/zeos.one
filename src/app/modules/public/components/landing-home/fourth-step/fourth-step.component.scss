@@ -10,6 +10,9 @@
   .full-height {
     height: 140vh!important;
   }
+  .card-text {
+    font-size: calc(14px + .9vw)!important;
+  }
 }
 
 @media screen and (max-width: 660px) {

@@ -1,10 +1,13 @@
 .full-height {
   min-height: 100vh!important;
+  display: block;
+  padding-bottom: 50px!important;
 }
 app-arrow-redirect {
   z-index: 1;
   position: relative!important;
-  top: -100px!important;
+  margin:auto;
+  bottom: -50px!important;
 }
 #content {
   z-index: 0;
@@ -14,10 +17,8 @@ app-arrow-redirect {
   app-arrow-redirect {
     margin-top: 2%!important;
     padding-top: 2%!important;
-    position: relative!important;
-    bottom: 50px!important;
   }
-  #content {
-    padding-bottom: 35%!important;
+  .full-height {
+    padding-bottom: 150px!important;
   }
 }
