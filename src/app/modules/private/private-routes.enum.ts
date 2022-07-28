@@ -1,5 +1,6 @@
 export enum PrivateRoutes {
   default= '',
   home= 'home',
-  wallet= 'wallet',
+  demo= 'demo',
+  wallet= 'wallet'
 }

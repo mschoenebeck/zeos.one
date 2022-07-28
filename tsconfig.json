@@ -1,9 +1,12 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
+  "jsx": "react",
   "compilerOptions": {
+    "jsx": "react",
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "types": ["node"],
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
@@ -18,6 +21,11 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "stream": ["./node_modules/readable-stream"]
+    },
     "lib": [
       "es2020",
       "dom"

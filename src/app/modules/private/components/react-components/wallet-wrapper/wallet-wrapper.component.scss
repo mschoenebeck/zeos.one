@@ -1,0 +1,195 @@
+::ng-deep {
+
+body
+{
+  background-color: black;
+  color: darkgrey;
+
+  /* at least the logger height */
+  margin-bottom: 200px;
+}
+
+/* main header */
+.menu-header {
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+    height: 50px;
+    width: 100%;
+    top: 0%;
+    padding: 2px 15px 2px 15px;
+}
+
+/* main content */
+.content {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 20px;
+
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+/* main footer */
+.logger-wrapper {
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 150px;
+    background-color: black;
+}
+.logger-wrapper .header {
+    position: absolute;
+    z-index: 1;
+    margin-top: -10px;
+    margin-left: calc(1vw + 10px);
+    color: black;
+    background: darkgrey;
+    border-radius: 5px;
+    padding: 2px 15px;
+  }
+  .logger-wrapper .header .MuiInputLabel-root {
+      color: black;
+  }
+#logger {
+    width: 98vw;
+    box-sizing: border-box; /* to make width: 100% minus padding of parent */
+
+    height: 150px;
+    background-color: black;
+    position: fixed;
+    bottom: 0%;
+
+    border-radius: 5px;
+    border-style: solid;
+    border-color: darkgrey;
+    padding: 15px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+
+    overflow-y:auto;
+}
+
+/* overwrite some mui attributes */
+.MuiInputBase-root, .MuiIconButton-root, .MuiSelect-icon {
+    color: darkgrey !important;
+}
+.MuiButton-containedPrimary, .MuiButton-containedSecondary {
+    color: black !important;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px 20px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 10px 20px;
+}
+
+.text-row{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 5px 5px;
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: 'Nerd';
+}
+
+.component {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: darkgrey;
+    padding: 15px;
+    margin: 10px;
+}
+#ual-login {
+    border-style: none;
+}
+.full-width {
+    width: 100%;
+    box-sizing: border-box; /* to make width: 100% minus padding of parent */
+}
+
+.component .header {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: -10px;
+    color: black;
+    background: darkgrey;
+    border-radius: 5px;
+    padding: 2px 15px;
+  }
+  .component .header .MuiInputLabel-root {
+      color: black;
+  }
+
+
+.note {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px 2px;
+}
+.note-quantity {
+    font-size: 12px;
+}
+.note-row{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 5px 10px;
+    flex-wrap: wrap;
+}
+
+pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: red; }
+
+/*
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+.ual-title, .ual-subtitle {
+font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+}
+.ual-generic-wrapper {
+    padding: 10px;
+}
+.ual-generic-button {
+font-family: 'Source Sans Pro', sans-serif;
+padding: 10px 20px;
+margin: 20px;
+color: #470FF4;
+border-radius: 4px;
+cursor: pointer;
+background-color: #CEBBC9;
+}
+.ual-generic-button.blue {
+color: #CEBBC9;
+background-color: #4056F4
+}
+.ual-generic-button.red {
+color: #CEBBC9;
+background-color: #CE2D4F;
+}
+.ual-btn-wrapper {
+margin: 20px 0px 40px 0px;
+}
+*/
+
+}

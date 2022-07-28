@@ -1,3 +1,5 @@
+import { AppRoutes } from './../../../../../app-routes.enum';
+import { PrivateRoutes } from './../../../../private/private-routes.enum';
 import { LandingPageAction } from './../enums/landing-page-action.enum';
 
 import { Component, EventEmitter, HostListener, Output, ViewChild, ElementRef } from '@angular/core';
@@ -46,6 +48,10 @@ export class NavigationBarComponent {
   }
 
   public openWallet(): void {
-    window.open('https://zeos.one/wallet');
+    this.navigate(AppRoutes.private + '/' + PrivateRoutes.wallet);
+  }
+
+  private navigate(url: string) {
+    window.open(url);
   }
 }
