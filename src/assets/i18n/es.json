@@ -78,6 +78,17 @@
       },
       "fifth-step": {
         "title": " ",
+
+        "first-progress-year": "2021",
+        "second-progress-year": "2021",
+        "third-progress-year": "2021",
+
+        "all-quarter": "ALL",
+        "first-quarter": "Q1",
+        "second-quarter": "Q2",
+        "third-quarter": "Q3",
+        "fourth-quarter": "Q4",
+
         "first-map-date": "12/25/2021",
         "first-map-text": "Airdrop",
         "first-map-link": "https://t.me/ZeosOnEos/5117",
