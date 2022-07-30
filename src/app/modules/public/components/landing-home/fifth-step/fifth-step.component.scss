@@ -1,7 +1,7 @@
 
-  .roadmap-container {
-    padding-bottom: 150px!important;
-  }
+.roadmap-container {
+  padding-bottom: 150px!important;
+}
 @mixin tablet-and-up {
   @media screen and (min-width: 769px) {
     @content;
