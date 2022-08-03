@@ -24,7 +24,7 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-import { zeos_create_key } from './RustWasm'
+import * as RustWasm from './RustWasm'
 
 const theme = createTheme({
   palette: {
@@ -157,7 +157,7 @@ const App = () =>
   {
     // can create randomness here in JS or in RUST by passing an empty seed
     //var seed = Array.from({length: 32}, () => Math.floor(Math.random() * 256))
-    var kp = JSON.parse(await zeos_create_key(sk))
+    var kp = JSON.parse(await RustWasm.zeos_create_key(sk))
     kp.id  = keyPairs.length
     kp.gs_tx_count = 0;
     kp.gs_mt_leaf_count = 0;
@@ -174,17 +174,22 @@ const App = () =>
   async function onImportKey()
   {
     // TODO: check for valid input string
-    var sk = base58_to_binary(document.getElementById("key-input").value.substring(1));
-    if(32 !== sk.length) return;
-    for(const kp of keyPairs)
-    {
-      if(sk.every(function(v, i) {return v === kp.sk[i]}))
+    const keyInput = document.getElementById("key-input").value;
+    if(keyInput) {
+      var sk = base58_to_binary(keyInput.substring(1));
+      if(32 !== sk.length) return;
+      for(const kp of keyPairs)
       {
-        alert('key pair already exists!');
-        return;
+        if(sk.every(function(v, i) {return v === kp.sk[i]}))
+        {
+          alert('key pair already exists!');
+          return;
+        }
       }
+      await onCreateNewKey(sk);
+    } else {
+      alert('cannot import empty keypair!')
     }
-    await onCreateNewKey(sk);
   }
 
   function onKeySelect(e)
@@ -251,7 +256,7 @@ const App = () =>
         memo: Array.from(mm)
       };
 
-      var json = await zeos_create_mint_transaction(mint_params,
+      var json = await RustWasm.zeos_create_mint_transaction(mint_params,
                                                     JSON.stringify(mint_addr),
                                                     JSON.stringify(mint_tx_r),
                                                     eos_user);
@@ -370,9 +375,12 @@ const App = () =>
     // find note to transfer: choose the smallest necessary but not bigger than needed
     // TODO: later spent_note will become an array to allow for more than one note to spend at a time
     var spent_note = null;
+    console.log(keyPairs[selectedKey].unspentNotes)
     for(const n of keyPairs[selectedKey].unspentNotes)
     {
       // since unspentNotes is sorted just choose the next bigger equal one
+      console.log(n.quantity.amount)
+      console.log(qty.amount)
       if(n.quantity.amount >= qty.amount)
       {
         // clone object here because of delete calls further below
@@ -426,7 +434,7 @@ const App = () =>
         memo: Array.from(mm)
       };
 
-      var json = await zeos_create_ztransfer_transaction(ztransfer_params,
+      var json = await RustWasm.zeos_create_ztransfer_transaction(ztransfer_params,
                                                          keyPairs[selectedKey].sk,
                                                          JSON.stringify(ztransfer_tx_s),
                                                          JSON.stringify(ztransfer_tx_r),
@@ -537,7 +545,7 @@ const App = () =>
 
       var quantity = { amount: qty.amount, symbol: qty.symbol.code }
 
-      var json = await zeos_create_burn_transaction(burn_params,
+      var json = await RustWasm.zeos_create_burn_transaction(burn_params,
                                                     keyPairs[selectedKey].sk,
                                                     JSON.stringify(burn_tx_s),
                                                     JSON.stringify(quantity),
@@ -708,7 +716,7 @@ const App = () =>
       delete enc_tx.id;
       delete enc_tx.type;
       delete enc_tx.mt_leaf_count;
-      var dec_tx = JSON.parse(await zeos_decrypt_transaction(newKp.sk, JSON.stringify(enc_tx)));
+      var dec_tx = JSON.parse(await RustWasm.zeos_decrypt_transaction(newKp.sk, JSON.stringify(enc_tx)));
       dec_tx.id = tx.id;
       dec_tx.type = tx.type;
       dec_tx.mt_leaf_count = tx.mt_leaf_count;
@@ -722,8 +730,8 @@ const App = () =>
           {
             // add new note
             let note = dec_tx.receiver.notes[0];
-            note.commitment = await zeos_note_commitment(JSON.stringify(note), newKp.addr.h_sk);
-            note.nullifier = await zeos_note_nullifier(JSON.stringify(note), newKp.sk);
+            note.commitment = await RustWasm.zeos_note_commitment(JSON.stringify(note), newKp.addr.h_sk);
+            note.nullifier = await RustWasm.zeos_note_nullifier(JSON.stringify(note), newKp.sk);
             note.mt_leaf_idx = tx.mt_leaf_count;
             note.mt_arr_idx = Math.floor(note.mt_leaf_idx/MT_NUM_LEAVES(gs.mt_depth)) * MT_ARR_FULL_TREE_OFFSET(gs.mt_depth) +
                               note.mt_leaf_idx % MT_NUM_LEAVES(gs.mt_depth) + MT_ARR_LEAF_ROW_OFFSET(gs.mt_depth);
@@ -747,8 +755,8 @@ const App = () =>
 
             // add change note [TODO: in case of multiple notes bein sent: the biggest change note (i.e. the only one that is not zero) must come first!]
             let note = dec_tx.sender.change;
-            note.commitment = await zeos_note_commitment(JSON.stringify(note), newKp.addr.h_sk);
-            note.nullifier = await zeos_note_nullifier(JSON.stringify(note), newKp.sk);
+            note.commitment = await RustWasm.zeos_note_commitment(JSON.stringify(note), newKp.addr.h_sk);
+            note.nullifier = await RustWasm.zeos_note_nullifier(JSON.stringify(note), newKp.sk);
             note.mt_leaf_idx = tx.mt_leaf_count + 1;
             note.mt_arr_idx = Math.floor(note.mt_leaf_idx/MT_NUM_LEAVES(gs.mt_depth)) * MT_ARR_FULL_TREE_OFFSET(gs.mt_depth) +
                               note.mt_leaf_idx % MT_NUM_LEAVES(gs.mt_depth) + MT_ARR_LEAF_ROW_OFFSET(gs.mt_depth);
@@ -761,8 +769,8 @@ const App = () =>
               {
                 let note = dec_tx.receiver.notes[i];
                 // get nullifier and commitment
-                note.commitment = await zeos_note_commitment(JSON.stringify(note), newKp.addr.h_sk);
-                note.nullifier = await zeos_note_nullifier(JSON.stringify(note), newKp.sk);
+                note.commitment = await RustWasm.zeos_note_commitment(JSON.stringify(note), newKp.addr.h_sk);
+                note.nullifier = await RustWasm.zeos_note_nullifier(JSON.stringify(note), newKp.sk);
                 note.mt_leaf_idx = tx.mt_leaf_count + i*2; // skip sender change notes
                 note.mt_arr_idx = Math.floor(note.mt_leaf_idx/MT_NUM_LEAVES(gs.mt_depth)) * MT_ARR_FULL_TREE_OFFSET(gs.mt_depth) +
                                   note.mt_leaf_idx % MT_NUM_LEAVES(gs.mt_depth) + MT_ARR_LEAF_ROW_OFFSET(gs.mt_depth);
@@ -779,8 +787,8 @@ const App = () =>
               {
                 let note = dec_tx.receiver.notes[i];
                 // get nullifier and commitment
-                note.commitment = await zeos_note_commitment(JSON.stringify(note), newKp.addr.h_sk);
-                note.nullifier = await zeos_note_nullifier(JSON.stringify(note), newKp.sk);
+                note.commitment = await RustWasm.zeos_note_commitment(JSON.stringify(note), newKp.addr.h_sk);
+                note.nullifier = await RustWasm.zeos_note_nullifier(JSON.stringify(note), newKp.sk);
                 note.mt_leaf_idx = tx.mt_leaf_count + i*2; // skip change notes
                 note.mt_arr_idx = Math.floor(note.mt_leaf_idx/MT_NUM_LEAVES(gs.mt_depth)) * MT_ARR_FULL_TREE_OFFSET(gs.mt_depth) +
                                   note.mt_leaf_idx % MT_NUM_LEAVES(gs.mt_depth) + MT_ARR_LEAF_ROW_OFFSET(gs.mt_depth);
@@ -806,8 +814,8 @@ const App = () =>
 
               // add change note [TODO: in case of multiple notes bein sent: the biggest change note (i.e. the only one that is not zero) must come first!]
               let note = dec_tx.sender.change;
-              note.commitment = await zeos_note_commitment(JSON.stringify(note), newKp.addr.h_sk);
-              note.nullifier = await zeos_note_nullifier(JSON.stringify(note), newKp.sk);
+              note.commitment = await RustWasm.zeos_note_commitment(JSON.stringify(note), newKp.addr.h_sk);
+              note.nullifier = await RustWasm.zeos_note_nullifier(JSON.stringify(note), newKp.sk);
               note.mt_leaf_idx = tx.mt_leaf_count;
               note.mt_arr_idx = Math.floor(note.mt_leaf_idx/MT_NUM_LEAVES(gs.mt_depth)) * MT_ARR_FULL_TREE_OFFSET(gs.mt_depth) +
                                 note.mt_leaf_idx % MT_NUM_LEAVES(gs.mt_depth) + MT_ARR_LEAF_ROW_OFFSET(gs.mt_depth);
