@@ -1,119 +1,123 @@
-<app-first-container
-  [emitAction]="LandingPageAction.SIXTH_CONTAINER"
-  [arrowDirection]="ArrowDirection.ARROW_DOWN"
+<app-first-container [emitAction]="LandingPageAction.SIXTH_CONTAINER" [arrowDirection]="ArrowDirection.ARROW_DOWN"
   (landingPageAction)="changeAction($event)">
 
-    <div class="row m-auto align-items-center text-lightgrey roadmap-container">
-      <div class="d-grid text-center">
-        <div class="row m-auto w-75">
+  <div class="row m-auto w-75 text-center">
+    <ul class="col-md-12 col-lg-2 sessions">
+      <div class="d-grid">
+        <h1><strong>{{('public.components.fifth-step.first-progress-year' | transloco)}}</strong></h1>
+        <span class="display-4">{{('public.components.fifth-step.all-quarter' | transloco)}}</span>
+        <hr>
+      </div>
 
-          <ul class="col-md-12 col-lg-2 sessions">
-            <div class="d-grid">
-              <h1><strong>{{('public.components.fifth-step.first-progress-year' | transloco)}}</strong></h1>
-              <span class="display-4">{{('public.components.fifth-step.all-quarter' | transloco)}}</span>
-              <hr>
-            </div>
+      <li>
+        <div class="time nerd">{{('public.components.fifth-step.first-map-date' | transloco)}}</div>
+        <p class="nerd">{{('public.components.fifth-step.first-map-text' | transloco)}}<a
+            [href]="['https://t.me/ZeosOnEos/5117']"><img src="./assets/img/icons/telegrama.png" width="25" height="25"
+              class="mx-4" alt="Private and Untraceable Image" /></a></p>
+      </li>
+    </ul>
 
-            <li>
-              <div class="time nerd">{{('public.components.fifth-step.first-map-date' | transloco)}}</div>
-              <p class="nerd">{{('public.components.fifth-step.first-map-text' | transloco)}}<a [href]="['https://t.me/ZeosOnEos/5117']"><img src="./assets/img/icons/telegrama.png" width="25" height="25" class="mx-4" alt="Private and Untraceable Image"/></a></p>
-            </li>
-          </ul>
+    <ul class="col-md-12 col-lg-2 sessions">
+      <div class="d-grid">
+        <h1><strong>{{('public.components.fifth-step.second-progress-year' | transloco)}}</strong></h1>
+        <span class="display-4">{{('public.components.fifth-step.first-quarter' | transloco)}}</span>
+        <hr>
+      </div>
 
-          <ul class="col-md-12 col-lg-2 sessions">
-            <div class="d-grid">
-              <h1><strong>{{('public.components.fifth-step.second-progress-year' | transloco)}}</strong></h1>
-              <span class="display-4">{{('public.components.fifth-step.first-quarter' | transloco)}}</span>
-              <hr>
-            </div>
+      <li>
+        <div class="time nerd">{{('public.components.fifth-step.second-map-date' | transloco)}}</div>
+        <p class="nerd">{{('public.components.fifth-step.second-map-text' | transloco)}}<a
+            [href]="['https://t.me/ZeosOnEos/9258']"><img src="./assets/img/icons/telegrama.png" width="25" height="25"
+              class="mx-4" alt="Private and Untraceable Image" /></a></p>
+      </li>
+      <li>
+        <div class="time nerd">{{('public.components.fifth-step.third-map-date' | transloco)}}</div>
+        <p class="nerd">{{('public.components.fifth-step.third-map-text' | transloco)}}<a
+            [href]="['https://t.me/ZeosOnEos/12675']"><img src="./assets/img/icons/telegrama.png" width="25" height="25"
+              class="mx-4" alt="Private and Untraceable Image" /></a></p>
+      </li>
+      <li>
+        <div class="time nerd">{{('public.components.fifth-step.fourth-map-date' | transloco)}}</div>
+        <p class="nerd">{{('public.components.fifth-step.fourth-map-text' | transloco)}}<a
+            [href]="['https://t.me/ZeosOnEos/13643']"><img src="./assets/img/icons/telegrama.png" width="25" height="25"
+              class="mx-4" alt="Private and Untraceable Image" /></a></p>
+      </li>
+    </ul>
 
-            <li>
-              <div class="time nerd">{{('public.components.fifth-step.second-map-date' | transloco)}}</div>
-              <p class="nerd">{{('public.components.fifth-step.second-map-text' | transloco)}}<a [href]="['https://t.me/ZeosOnEos/9258']"><img src="./assets/img/icons/telegrama.png" width="25" height="25" class="mx-4" alt="Private and Untraceable Image"/></a></p>
-            </li>
-            <li>
-              <div class="time nerd">{{('public.components.fifth-step.third-map-date' | transloco)}}</div>
-              <p class="nerd">{{('public.components.fifth-step.third-map-text' | transloco)}}<a [href]="['https://t.me/ZeosOnEos/12675']"><img src="./assets/img/icons/telegrama.png" width="25" height="25" class="mx-4" alt="Private and Untraceable Image"/></a></p>
-            </li>
-            <li>
-              <div class="time nerd">{{('public.components.fifth-step.fourth-map-date' | transloco)}}</div>
-              <p class="nerd">{{('public.components.fifth-step.fourth-map-text' | transloco)}}<a [href]="['https://t.me/ZeosOnEos/13643']"><img src="./assets/img/icons/telegrama.png" width="25" height="25" class="mx-4" alt="Private and Untraceable Image"/></a></p>
-            </li>
-          </ul>
+    <ul class="col-md-12 col-lg-2 sessions">
+      <div class="d-grid">
+        <h1><strong>{{('public.components.fifth-step.second-progress-year' | transloco)}}</strong></h1>
+        <span class="display-4">{{('public.components.fifth-step.second-quarter' | transloco)}}</span>
+        <hr>
+      </div>
 
-          <ul class="col-md-12 col-lg-2 sessions">
-            <div class="d-grid">
-              <h1><strong>{{('public.components.fifth-step.second-progress-year' | transloco)}}</strong></h1>
-              <span class="display-4">{{('public.components.fifth-step.second-quarter' | transloco)}}</span>
-              <hr>
-            </div>
+      <li>
+        <div class="time nerd">{{('public.components.fifth-step.fifth-map-date' | transloco)}}</div>
+        <p class="nerd">{{('public.components.fifth-step.fifth-map-text' | transloco)}}<a
+            [href]="['https://t.me/ZeosOnEos/17478']"><img src="./assets/img/icons/telegrama.png" width="25" height="25"
+              class="mx-4" alt="Private and Untraceable Image" /></a></p>
+      </li>
+      <li>
+        <div class="time nerd">{{('public.components.fifth-step.sixth-map-date' | transloco)}}</div>
+        <p class="nerd">{{('public.components.fifth-step.sixth-map-text' | transloco)}}<a
+            [href]="['https://t.me/ZeosOnEos/18028']"><img src="./assets/img/icons/telegrama.png" width="25" height="25"
+              class="mx-4" alt="Private and Untraceable Image" /></a></p>
+      </li>
+    </ul>
 
-            <li>
-              <div class="time nerd">{{('public.components.fifth-step.fifth-map-date' | transloco)}}</div>
-              <p class="nerd">{{('public.components.fifth-step.fifth-map-text' | transloco)}}<a [href]="['https://t.me/ZeosOnEos/17478']"><img src="./assets/img/icons/telegrama.png" width="25" height="25" class="mx-4" alt="Private and Untraceable Image"/></a></p>
-            </li>
-            <li>
-              <div class="time nerd">{{('public.components.fifth-step.sixth-map-date' | transloco)}}</div>
-              <p class="nerd">{{('public.components.fifth-step.sixth-map-text' | transloco)}}<a [href]="['https://t.me/ZeosOnEos/18028']"><img src="./assets/img/icons/telegrama.png" width="25" height="25" class="mx-4" alt="Private and Untraceable Image"/></a></p>
-            </li>
-          </ul>
+    <ul class="col-md-12 col-lg-2 sessions">
+      <div class="d-grid">
+        <h1><strong>{{('public.components.fifth-step.second-progress-year' | transloco)}}</strong></h1>
+        <span class="display-4">{{('public.components.fifth-step.third-quarter' | transloco)}}</span>
+        <hr>
+      </div>
 
-          <ul class="col-md-12 col-lg-2 sessions">
-            <div class="d-grid">
-              <h1><strong>{{('public.components.fifth-step.second-progress-year' | transloco)}}</strong></h1>
-              <span class="display-4">{{('public.components.fifth-step.third-quarter' | transloco)}}</span>
-              <hr>
-            </div>
+      <li>
+        <div class="time nerd">{{('public.components.fifth-step.seventh-map-date' | transloco)}}</div>
+        <p class="nerd">{{('public.components.fifth-step.seventh-map-text' | transloco)}}</p>
+      </li>
+      <li>
+        <div class="time nerd">{{('public.components.fifth-step.eighth-map-date' | transloco)}}</div>
+        <p class="nerd">{{('public.components.fifth-step.eighth-map-text' | transloco)}}</p>
+      </li>
+      <li>
+        <div class="time nerd">{{('public.components.fifth-step.nineth-map-date' | transloco)}}</div>
+        <p class="nerd">{{('public.components.fifth-step.nineth-map-text' | transloco)}}</p>
+      </li>
+    </ul>
 
-            <li>
-              <div class="time nerd">{{('public.components.fifth-step.seventh-map-date' | transloco)}}</div>
-              <p class="nerd">{{('public.components.fifth-step.seventh-map-text' | transloco)}}</p>
-            </li>
-            <li>
-              <div class="time nerd">{{('public.components.fifth-step.eighth-map-date' | transloco)}}</div>
-              <p class="nerd">{{('public.components.fifth-step.eighth-map-text' | transloco)}}</p>
-            </li>
-            <li>
-              <div class="time nerd">{{('public.components.fifth-step.nineth-map-date' | transloco)}}</div>
-              <p class="nerd">{{('public.components.fifth-step.nineth-map-text' | transloco)}}</p>
-            </li>
-          </ul>
+    <ul class="col-md-12 col-lg-2 sessions">
+      <div class="d-grid">
+        <h1><strong>{{('public.components.fifth-step.second-progress-year' | transloco)}}</strong></h1>
+        <span class="display-4">{{('public.components.fifth-step.fourth-quarter' | transloco)}}</span>
+        <hr>
+      </div>
 
-          <ul class="col-md-12 col-lg-2 sessions">
-            <div class="d-grid">
-              <h1><strong>{{('public.components.fifth-step.second-progress-year' | transloco)}}</strong></h1>
-              <span class="display-4">{{('public.components.fifth-step.fourth-quarter' | transloco)}}</span>
-              <hr>
-            </div>
+      <li>
+        <div class="time nerd">{{('public.components.fifth-step.tenth-map-date' | transloco)}}</div>
+        <p class="nerd">{{('public.components.fifth-step.tenth-map-text' | transloco)}}</p>
+      </li>
+      <li>
+        <div class="time nerd">{{('public.components.fifth-step.eleventh-map-date' | transloco)}}</div>
+        <p class="nerd">{{('public.components.fifth-step.eleventh-map-text' | transloco)}}</p>
+      </li>
+      <li>
+        <div class="time nerd">{{('public.components.fifth-step.twelfth-map-date' | transloco)}}</div>
+        <p class="nerd">{{('public.components.fifth-step.twelfth-map-text' | transloco)}}</p>
+      </li>
+    </ul>
 
-            <li>
-              <div class="time nerd">{{('public.components.fifth-step.tenth-map-date' | transloco)}}</div>
-              <p class="nerd">{{('public.components.fifth-step.tenth-map-text' | transloco)}}</p>
-            </li>
-            <li>
-              <div class="time nerd">{{('public.components.fifth-step.eleventh-map-date' | transloco)}}</div>
-              <p class="nerd">{{('public.components.fifth-step.eleventh-map-text' | transloco)}}</p>
-            </li>
-            <li>
-              <div class="time nerd">{{('public.components.fifth-step.twelfth-map-date' | transloco)}}</div>
-              <p class="nerd">{{('public.components.fifth-step.twelfth-map-text' | transloco)}}</p>
-            </li>
-          </ul>
+    <ul class="col-md-12 col-lg-2 sessions">
+      <div class="d-grid">
+        <h1><strong>{{('public.components.fifth-step.third-progress-year' | transloco)}}</strong></h1>
+        <span class="display-4">{{('public.components.fifth-step.first-quarter' | transloco)}}</span>
+        <hr>
+      </div>
 
-          <ul class="col-md-12 col-lg-2 sessions">
-            <div class="d-grid">
-              <h1><strong>{{('public.components.fifth-step.third-progress-year' | transloco)}}</strong></h1>
-              <span class="display-4">{{('public.components.fifth-step.first-quarter' | transloco)}}</span>
-              <hr>
-            </div>
-
-            <li>
-              <div class="time nerd">{{('public.components.fifth-step.thirteenth-map-date' | transloco)}}</div>
-              <p class="nerd">{{('public.components.fifth-step.thirteenth-map-text' | transloco)}}</p>
-            </li>
-          </ul>
-        </div>
-
-    </div>
+      <li>
+        <div class="time nerd">{{('public.components.fifth-step.thirteenth-map-date' | transloco)}}</div>
+        <p class="nerd">{{('public.components.fifth-step.thirteenth-map-text' | transloco)}}</p>
+      </li>
+    </ul>
   </div>
 </app-first-container>
