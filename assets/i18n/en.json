@@ -1,0 +1,163 @@
+{
+  "shared": {
+    "arrow-redirect": {
+      "arrow-up-alt": "Arrow up image",
+      "arrow-down-alt": "Arrow down imaage"
+    },
+    "navigation-bar": {
+      "first-item": "Home",
+      "second-item": "Protocol",
+      "third-item": "zAseets",
+      "fourth-item": "Token",
+      "fifth-item": "Roadmap",
+      "sixth-item": "Resources",
+      "seventh-item": "Wallet",
+
+      "first-item-title": "Go to Home",
+      "second-item-title": "Go to zAseets",
+      "third-item-title": "Go to Roadmap",
+      "fourth-item-title": "Go to Token",
+      "fifth-item-title": "Go to Roadmap",
+      "sixth-item-title": "Go to Resources",
+      "seventh-item-title": "Wallet"
+    }
+  },
+  "public": {
+    "components": {
+      "first-step": {
+        "title": "ZEOS",
+        "hashtag-privacy-matters": "#PrivacyMatters",
+        "token-logo-alt": "Token logo image"
+      },
+      "second-step": {
+        "first-container-alt": "Private p2p Transactions",
+        "first-container-title": "Private p2p Transactions",
+        "first-container-text": "ZEOS enables private and untraceable transactions for any fungible and non-fungible asset on the EOS mainnet. No modifications of existing token contracts are required. Use ZEOS wallets to hold and transfer all your favorite EOS assets in full privacy.",
+        "second-container-alt": "Private DeFi",
+        "second-container-title": "Private DeFi",
+        "second-container-text": "ZEOS introduces a concept for private deposits and withdrawals. Any third party application on EOS can add this feature to their smart contracts to offer anonymous access. This protocol feature enables private DeFi on EOS giving all dApps the ability to allow for private user interactions.",
+        "third-container-alt": "Private Transactions without EOS account",
+        "third-container-title": "Private Transactions without EOS account",
+        "third-container-text": "With the upcoming Mandel-Upgrade of EOSIO a new feature is introduced enabling private transactions without EOS account. This will enable ZEOS wallets direct and private access to the EOS ecosystem. This could potentially onboard new users who value privacy and don't want to create an EOS account.",
+        "fourth-container-alt": "Instantaneous Transactions",
+        "fourth-container-title": "Instantaneous Transactions",
+        "fourth-container-text": "Since ZEOS is build on EOS private transactions benefit from the high performance of the EOS blockchain making them almost instantaneous as well as final after only a few seconds. ZEOS therefore has significantly shorter transaction times than any other privacy coin in the space.",
+        "fifth-container-alt": "Scalable and Cheap",
+        "fifth-container-title": "Scalable and Cheap",
+        "fifth-container-text": "ZEOS utilizes LiquidApps' DAPP Network services to provide unlimited scaling and lowest costs for the end user. The goal of ZEOS is to make private transactions as cheap as possible for anyone. Privacy shouldn't be a luxury but rather the default for all blockchain transactions.",
+        "sixth-container-alt": "ZCash Privacy",
+        "sixth-container-title": "ZCash Privacy",
+        "sixth-container-text": "Based on the latest zk-SNARK proving system of ZCash ZEOS' private transactions utilize the leading privacy technology of the entire blockchain space. ZEOS is one of the first crypto projects to adapt the new 'Halo 2' proving system which does not require the famous 'trusted setup' anymore."
+      },
+      "third-step": {
+        "title": " ",
+        "first-container-alt": "Synthetic",
+        "first-container-title": "Synthetic",
+        "first-container-text": "zAssets are derivatives of real world assets like fiat currencies, precious metals, commodities or stocks. They can be minted and burned in exchange for collateral. As standard EOS fungible tokens they can be transferred and traded like any other asset on EOS.",
+        "second-container-alt": "Fractionally-Algorithmic",
+        "second-container-title": "Fractionally-Algorithmic",
+        "second-container-text": "zAssets are not exclusively created by burning ZEOS. Instead, depending on the overall valuation of all zAssets in circulation and the ZEOS token itself the protocol maintains a pool of external collateral to reduce risk of becoming 'over-leveraged'.",
+        "third-container-alt": "Capital Efficient",
+        "third-container-title": "Capital Efficient",
+        "third-container-text": "The elastic token supply of ZEOS allows for more capital-efficiency when minting zAssets: There is no over-collateralization. Users who mint zAssets lock the exact same value in the protocol as they receive from the protocol in form of zAssets - or vice versa in case of burning. This is in contrast to collateralized debt positions (CDP) where several dollars of collateral need to be locked in order to create one dollar of CDP.",
+        "fourth-container-alt": "Backed by ZEOS, EOS and Vigor",
+        "fourth-container-title": "Backed by ZEOS, EOS and Vigor",
+        "fourth-container-text": "Synthetic zAssets are backed not only by the ZEOS token itself but also external collateral: EOS and Vigor stable tokens get locked in case the demand of zAssets outpaces the growth of the ZEOS token. Minting and burning of zAssets always result in a different ratio of ZEOS, EOS and Vigor tokens that need to be added (or removed) depending on the current state of the protocol."
+      },
+      "fourth-step": {
+        "title": " ",
+        "first-container-alt": "Gas Token",
+        "first-container-title": "Gas Token",
+        "first-container-text": "The ZEOS token is the gas token that powers private access to the EOS ecosystem without EOS account. The amount of ZEOS which needs to be paid for a transaction depends on how many EOS blockchain resources the transaction consumes. This gives ZEOS a gas token character similar to Ether on Ethereum.",
+        "second-container-alt": "Share Token",
+        "second-container-title": "Share Token",
+        "second-container-text": "ZEOS is the so-called 'share token' which is - in addition to external collateral - required to mint synthetic zAssets. The higher the valuation of ZEOS compared to the valuation of all circulating zAssets the more ZEOS gets burned when new synthetic assets get minted.",
+        "third-container-alt": "Governance Token",
+        "third-container-title": "Governance Token",
+        "third-container-text": "ZEOS is the governance token of the smart organization which governs the ZEOS ecosystem. Details about the governance tokenomics have not been finalized yet. It will most likely include a staking requirement for all members of the organization."
+      },
+      "fifth-step": {
+        "title": " ",
+
+        "first-progress-year": "2021",
+        "second-progress-year": "2022",
+        "third-progress-year": "2023",
+
+        "all-quarter": "ALL",
+        "first-quarter": "Q1",
+        "second-quarter": "Q2",
+        "third-quarter": "Q3",
+        "fourth-quarter": "Q4",
+
+        "first-map-date": "12/25/2021",
+        "first-map-text": "Airdrop",
+        "first-map-link": "https://t.me/ZeosOnEos/5117",
+
+        "second-map-date": "01/09/2022",
+        "second-map-text": "ZCash Sapling Verifier on Kylin Testnet",
+        "second-map-link": "https://t.me/ZeosOnEos/9258",
+
+        "third-map-date": "02/17/2022",
+        "third-map-text": "First private transaction on Kylin Testnet",
+        "third-map-link": "https://t.me/ZeosOnEos/12675",
+
+        "fourth-map-date": "03/19/2022",
+        "fourth-map-text": "Demo application launch on Kylin Testnet",
+        "fourth-map-link": "https://t.me/ZeosOnEos/13643",
+
+        "fifth-map-date": "06/20/2022",
+        "fifth-map-text": "ZEOS Whitepaper",
+        "fifth-map-link": "https://t.me/ZeosOnEos/17478",
+
+        "sixth-map-date": "07/05/2022",
+        "sixth-map-text": "Website Upgrade",
+        "sixth-map-link": "./",
+
+        "seventh-map-date": "Q3 2022",
+        "seventh-map-text": "Zcash Orchard Verifier (Halo 2) on Kylin Testnet",
+        "seventh-map-link": "./",
+
+        "eighth-map-date": "Q3 2022",
+        "eighth-map-text": "Full Protocol Specification",
+        "eighth-map-link": "./",
+
+        "nineth-map-date": "Q3 2022",
+        "nineth-map-text": "2nd Protocol Demo Application (feature complete) on Kylin Testnet",
+        "nineth-map-link": "./",
+
+        "tenth-map-date": "Q4 2022",
+        "tenth-map-text": "zAssets Specification + Demo Application",
+        "tenth-map-link": "./",
+
+        "eleventh-map-date": "Q4 2022",
+        "eleventh-map-text": "Finalizing of ZEOS Governance/Staking Tokenomics",
+        "eleventh-map-link": "./",
+
+        "twelfth-map-date": "Q4 2022",
+        "twelfth-map-text": "Transactions without EOS Account/ZEOS Proxy Specification",
+        "twelfth-map-link": "./",
+
+        "thirteenth-map-date": "Q1 2023",
+        "thirteenth-map-text": "Protocol Rollout on EOS Mainnet",
+        "thirteenth-map-link": "./"
+      },
+      "sixth-step": {
+        "title": " ",
+        "email": "thezeostoken@protonmail.com",
+        "email-text": "You can email us on",
+        "whitepaper": "Whitepaper",
+        "github": "Github repos",
+        "powered-by": "Powered by",
+        "join-uson": "Join us now",
+        "sponsored": "Sponsors",
+        "test-net-demo": "Testnet Demo",
+        "eos-image-alt": "Eos logo link",
+        "dapp-image-alt": "Dapp logo link",
+        "telegram-image-alt": "Telegram logo link",
+        "discord-image-alt": "Discord logo link",
+        "github-image-alt": "Github logo link",
+        "eden-eos-image-alt": "Eden on Eos logo link"
+      }
+    }
+  }
+}

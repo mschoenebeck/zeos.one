@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>ZEOS #PrivacyMatters</title>
+  <base href="/zeos.one/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="./assets/img/icons/zeos_black.png"><!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-233759875-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+  <script>
+    var global = global || window;
+  </script>
+  <script type="module">
+// JS -> RUST WASM glue code
+// source: https://developer.mozilla.org/en-US/docs/WebAssembly/Rust_to_wasm
+import init, {
+    create_mint_transaction,
+    create_ztransfer_transaction,
+    create_burn_transaction,
+    decrypt_transaction,
+    create_key,
+    note_commitment,
+    note_nullifier
+} from "./src/pkg/sapling.js";
+
+window.zeos_create_mint_transaction = async function(params_bytes, addr_json, tx_r_json, eos_username)
+{
+    var res;
+    await init().then(() => {
+        res = create_mint_transaction(params_bytes, addr_json, tx_r_json, eos_username)
+    });
+    return res;
+}
+window.zeos_create_ztransfer_transaction = async function(params_bytes, secret_key, tx_s_json, tx_r_json, auth_path_v_json, auth_path_b_json)
+{
+    var res;
+    await init().then(() => {
+        res = create_ztransfer_transaction(params_bytes, secret_key, tx_s_json, tx_r_json, auth_path_v_json, auth_path_b_json)
+    });
+    return res;
+}
+window.zeos_create_burn_transaction = async function(params_bytes, secret_key, tx_s_json, quantity_json, auth_path_v_json, auth_path_b_json, eos_username)
+{
+    var res;
+    await init().then(() => {
+        res = create_burn_transaction(params_bytes, secret_key, tx_s_json, quantity_json, auth_path_v_json, auth_path_b_json, eos_username)
+    });
+    return res;
+}
+window.zeos_decrypt_transaction = async function(sk, enc_tx_json)
+{
+    var res;
+    await init().then(() => {
+        res = decrypt_transaction(sk, enc_tx_json)
+    });
+    return res;
+}
+window.zeos_create_key = async function(seed)
+{
+    var res;
+    await init().then(() => {
+        res = create_key(seed)
+    });
+    return res;
+}
+window.zeos_note_commitment = async function(note_json, h_sk)
+{
+    var res;
+    await init().then(() => {
+        res = note_commitment(note_json, h_sk)
+    });
+    return res;
+}
+window.zeos_note_nullifier = async function(note_json, sk)
+{
+    var res;
+    await init().then(() => {
+        res = note_nullifier(note_json, sk)
+    });
+    return res;
+}
+</script>
+<style>@charset "UTF-8";:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-gray-100:#f8f9fa;--bs-gray-200:#e9ecef;--bs-gray-300:#dee2e6;--bs-gray-400:#ced4da;--bs-gray-500:#adb5bd;--bs-gray-600:#6c757d;--bs-gray-700:#495057;--bs-gray-800:#343a40;--bs-gray-900:#212529;--bs-primary:#0d6efd;--bs-secondary:#6c757d;--bs-success:#198754;--bs-info:#0dcaf0;--bs-warning:#ffc107;--bs-danger:#dc3545;--bs-light:#f8f9fa;--bs-dark:#212529;--bs-primary-rgb:13,110,253;--bs-secondary-rgb:108,117,125;--bs-success-rgb:25,135,84;--bs-info-rgb:13,202,240;--bs-warning-rgb:255,193,7;--bs-danger-rgb:220,53,69;--bs-light-rgb:248,249,250;--bs-dark-rgb:33,37,41;--bs-white-rgb:255,255,255;--bs-black-rgb:0,0,0;--bs-body-color-rgb:33,37,41;--bs-body-bg-rgb:255,255,255;--bs-font-sans-serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));--bs-body-font-family:var(--bs-font-sans-serif);--bs-body-font-size:1rem;--bs-body-font-weight:400;--bs-body-line-height:1.5;--bs-body-color:#212529;--bs-body-bg:#fff}*,:after,:before{box-sizing:border-box}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}:root{--primary-color:rgba(9, 0, 255, 1);--primary-color-light:rgb(80, 121, 255);--lightgrey:rgb(211, 211, 211)}</style><link rel="stylesheet" href="styles.07d1e76586f01f73.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.07d1e76586f01f73.css"></noscript></head>
+<body>
+  <app-root></app-root>
+  <script>window.intercomSettings = {app_id: "tcs47dbx"};</script><script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/tcs47dbx';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+<script src="runtime.774c804d29a3e43f.js" type="module"></script><script src="polyfills.62a0fc31ba53e2c6.js" type="module"></script><script src="scripts.c9c6a43cee3e1491.js" defer></script><script src="main.9158ad41b7d9f11b.js" type="module"></script>
+
+</body></html>

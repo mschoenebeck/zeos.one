@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Arcade';
+  src: url('../fonts/arcade-normal.ttf');
+  /* IE9 Compat Modes */
+  src: url('../fonts/arcade-normal.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../fonts/arcade-normal.otf') format('opentype'),
+    /* Legacy iOS */
+    url('../fonts/arcade-normal.svg#Durant-Bold') format('svg'),
+    /* Legacy iOS */
+    url('../fonts/arcade-normal.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    url('../fonts/arcade-normal.woff') format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Nerd';
+  src: url('../fonts/nerd-normal.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text-lightgrey {
+  color: var(--lightgrey)!important;
+}
