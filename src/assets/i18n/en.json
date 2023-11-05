@@ -7,14 +7,14 @@
     "navigation-bar": {
       "first-item": "Home",
       "second-item": "Protocol",
-      "third-item": "zAseets",
+      "third-item": "zAssets",
       "fourth-item": "Token",
       "fifth-item": "Roadmap",
       "sixth-item": "Resources",
       "seventh-item": "Wallet",
 
       "first-item-title": "Go to Home",
-      "second-item-title": "Go to zAseets",
+      "second-item-title": "Go to zAssets",
       "third-item-title": "Go to Roadmap",
       "fourth-item-title": "Go to Token",
       "fifth-item-title": "Go to Roadmap",
